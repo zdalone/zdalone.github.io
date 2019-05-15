@@ -345,6 +345,216 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://zdalone.github.io/2019/05/15/在Linux下使用Java调用so文件的函数/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Bigdan">
+      <meta itemprop="description" content="理想三旬">
+      <meta itemprop="image" content="/images/lufei.jpeg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Bigdan的博客">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                
+                <a href="/2019/05/15/在Linux下使用Java调用so文件的函数/" class="post-title-link" itemprop="url">在linux下使用java调用so文件的函数</a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+
+              
+                
+              
+
+              <time title="创建时间：2019-05-15 11:20:44 / 修改时间：11:26:36" itemprop="dateCreated datePublished" datetime="2019-05-15T11:20:44+08:00">2019-05-15</time>
+            
+
+            
+              
+
+              
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/语言/" itemprop="url" rel="index"><span itemprop="name">语言</span></a></span>
+
+                
+                
+                  ，
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/语言/Java/" itemprop="url" rel="index"><span itemprop="name">Java</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+            
+          
+
+          
+          
+
+          
+
+          
+            <div class="post-symbolscount">
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">本文字数：</span>
+                
+                <span title="本文字数">3.2k</span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">3 分钟</span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h3 id="在linux下使用java调用so文件的函数"><a href="#在linux下使用java调用so文件的函数" class="headerlink" title=" 在linux下使用java调用so文件的函数"></a><center> 在linux下使用java调用so文件的函数</center></h3><h4 id="1-新建一个c文件并编辑代码"><a href="#1-新建一个c文件并编辑代码" class="headerlink" title="1.新建一个c文件并编辑代码"></a>1.新建一个c文件并编辑代码</h4> <div align="left"><br> <img src="/2019/05/15/在Linux下使用Java调用so文件的函数/1.png" alt="image"><br> </div>
+
+<p> <img src="/2019/05/15/在Linux下使用Java调用so文件的函数/2.png" alt="image"></p>
+<h4 id="2-编译c文件为库文件"><a href="#2-编译c文件为库文件" class="headerlink" title="2.编译c文件为库文件"></a>2.编译c文件为库文件</h4><p><img src="/2019/05/15/在Linux下使用Java调用so文件的函数/3.png" alt="image"></p>
+<p><img src="/2019/05/15/在Linux下使用Java调用so文件的函数/4.png" alt="image"></p>
+<h4 id="3-新建一个java文件并编辑代码"><a href="#3-新建一个java文件并编辑代码" class="headerlink" title="3.新建一个java文件并编辑代码"></a>3.新建一个java文件并编辑代码</h4><p><img src="/2019/05/15/在Linux下使用Java调用so文件的函数/5.png" alt="image"></p>
+<p><img src="/2019/05/15/在Linux下使用Java调用so文件的函数/6.png" alt="image"></p>
+<h4 id="4-编译java文件"><a href="#4-编译java文件" class="headerlink" title="4.编译java文件"></a>4.编译java文件</h4><p><img src="/2019/05/15/在Linux下使用Java调用so文件的函数/7.png" alt="image"></p>
+<h5 id="报错，检查原因发现是jna的jar包未放入classpath下"><a href="#报错，检查原因发现是jna的jar包未放入classpath下" class="headerlink" title="报错，检查原因发现是jna的jar包未放入classpath下"></a>报错，检查原因发现是jna的jar包未放入classpath下</h5><p><img src="/2019/05/15/在Linux下使用Java调用so文件的函数/8.png" alt="image"></p>
+<h5 id="这下就编译成功了！"><a href="#这下就编译成功了！" class="headerlink" title="这下就编译成功了！"></a>这下就编译成功了！</h5><h4 id="5-执行class文件"><a href="#5-执行class文件" class="headerlink" title="5.执行class文件"></a>5.执行class文件</h4><p><img src="/2019/05/15/在Linux下使用Java调用so文件的函数/9.png" alt="image"></p>
+<h5 id="报错，检查原因发现是CLASSPATH配置问题："><a href="#报错，检查原因发现是CLASSPATH配置问题：" class="headerlink" title="报错，检查原因发现是CLASSPATH配置问题："></a>报错，检查原因发现是CLASSPATH配置问题：</h5><p><img src="/2019/05/15/在Linux下使用Java调用so文件的函数/10.png" alt="image"><br><img src="/2019/05/15/在Linux下使用Java调用so文件的函数/11.png" alt="image"></p>
+<h5 id="修改一下"><a href="#修改一下" class="headerlink" title="修改一下:"></a>修改一下:</h5><p><img src="/2019/05/15/在Linux下使用Java调用so文件的函数/12.png" alt="image"></p>
+<h5 id="再次执行"><a href="#再次执行" class="headerlink" title="再次执行"></a>再次执行</h5><p><img src="/2019/05/15/在Linux下使用Java调用so文件的函数/13.png" alt="image"></p>
+<h5 id="这次成功了！"><a href="#这次成功了！" class="headerlink" title="这次成功了！"></a>这次成功了！</h5><h4 id="6-文件与下载"><a href="#6-文件与下载" class="headerlink" title="6.文件与下载"></a>6.文件与下载</h4><h5 id="上述处理目录与文件结构如下："><a href="#上述处理目录与文件结构如下：" class="headerlink" title="上述处理目录与文件结构如下："></a>上述处理目录与文件结构如下：</h5><p><img src="/2019/05/15/在Linux下使用Java调用so文件的函数/14.png" alt="image"></p>
+<h5 id="jna的jar包下载请点击：jna-4-4-0-jar"><a href="#jna的jar包下载请点击：jna-4-4-0-jar" class="headerlink" title="jna的jar包下载请点击：jna-4.4.0.jar"></a>jna的jar包下载请点击：<a href="在Linux下使用Java调用so文件的函数/jna-4.4.0.jar">jna-4.4.0.jar</a></h5><p><a href="在Linux下使用Java调用so文件的函数/jna-4.4.0.jar" target="_blank">jna-4.4.0.jar</a></p>
+
+          
+        
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+      
+    
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="https://zdalone.github.io/2019/05/14/软技能-代码之外的生存指南/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1078,7 +1288,7 @@
                 
                   <span class="post-meta-item-text">本文字数：</span>
                 
-                <span title="本文字数">3.4k</span>
+                <span title="本文字数">3.3k</span>
               
 
               
@@ -1115,7 +1325,7 @@
         
           
             <h3 id="Shell脚本：批量解压"><a href="#Shell脚本：批量解压" class="headerlink" title=" Shell脚本：批量解压"></a><center> Shell脚本：批量解压</center></h3><h4 id="一、需求"><a href="#一、需求" class="headerlink" title="一、需求"></a>一、需求</h4><p>将指定目录下的所有tar.gz文件解压并删除压缩文件</p>
-<h4 id="二、代码"><a href="#二、代码" class="headerlink" title="二、代码"></a>二、代码</h4><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash">! /bin/sh</span></span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash">需要传入1个参数</span></span><br><span class="line">if [ $# -ne 1 ];then</span><br><span class="line">	echo "USAGE: sh $0 path"</span><br><span class="line">	echo "eg: sh $0 /mnt/bigdan1/"</span><br><span class="line">exit 1</span><br><span class="line">fi</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash">获取1个参数</span></span><br><span class="line">srcPath=$1</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash">判断传入的参数是否存在</span></span><br><span class="line">if [ ! -d "$srcPath" ];then</span><br><span class="line">	echo "$srcPath does not exist"</span><br><span class="line">	exit 1</span><br><span class="line">fi</span><br><span class="line"></span><br><span class="line">REG="*.tar.gz"</span><br><span class="line"><span class="meta">#</span><span class="bash">获取srcPath下的所有tar.gz文件</span></span><br><span class="line">for dir in $(find $srcPath -name $REG)</span><br><span class="line">	do</span><br><span class="line">		echo "begin tar -zxf $dir to path: $&#123;dir%/*&#125; `date`"</span><br><span class="line"> 	   tar -zxf $dir -C  $&#123;dir%/*&#125; &amp;&amp; rm -rf $dir </span><br><span class="line">    		echo "finish !  `date`"</span><br><span class="line">	done</span><br><span class="line">exit 0</span><br></pre></td></tr></table></figure>
+<h4 id="二、代码"><a href="#二、代码" class="headerlink" title="二、代码"></a>二、代码</h4><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span>! /bin/sh</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span>需要传入1个参数</span><br><span class="line">if [ $# -ne 1 ];then</span><br><span class="line">	echo "USAGE: sh $0 path"</span><br><span class="line">	echo "eg: sh $0 /mnt/bigdan1/"</span><br><span class="line">exit 1</span><br><span class="line">fi</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span>获取1个参数</span><br><span class="line">srcPath=$1</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span>判断传入的参数是否存在</span><br><span class="line">if [ ! -d "$srcPath" ];then</span><br><span class="line">	echo "$srcPath does not exist"</span><br><span class="line">	exit 1</span><br><span class="line">fi</span><br><span class="line"></span><br><span class="line">REG="*.tar.gz"</span><br><span class="line"><span class="meta">#</span>获取srcPath下的所有tar.gz文件</span><br><span class="line">for dir in $(find $srcPath -name $REG)</span><br><span class="line">	do</span><br><span class="line">		echo "begin tar -zxf $dir to path: $&#123;dir%/*&#125; `date`"</span><br><span class="line"> 	   tar -zxf $dir -C  $&#123;dir%/*&#125; &amp;&amp; rm -rf $dir </span><br><span class="line">    		echo "finish !  `date`"</span><br><span class="line">	done</span><br><span class="line">exit 0</span><br></pre></td></tr></table></figure>
 <h4 id="三、知识点"><a href="#三、知识点" class="headerlink" title="三、知识点"></a>三、知识点</h4><p>① $#：参数个数</p>
 <p>② find $path -name $REG : 在$path路径下寻找满足正则$REG的所有文件</p>
 <p>③ ${dir%/*} ： 删掉dir最后一个  /  及其右边的字符串</p>
@@ -1855,7 +2065,7 @@ hexo clean &amp;&amp; hexo g &amp;&amp; hexo s
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">7</span>
+                    <span class="site-state-item-count">8</span>
                     <span class="site-state-item-name">日志</span>
                   </a>
                 </div>
@@ -1888,7 +2098,11 @@ hexo clean &amp;&amp; hexo g &amp;&amp; hexo s
                     
                       
                     
-                    <span class="site-state-item-count">8</span>
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">10</span>
                     <span class="site-state-item-name">分类</span>
                   </a>
                 </div>
@@ -1917,7 +2131,9 @@ hexo clean &amp;&amp; hexo g &amp;&amp; hexo s
                     
                       
                     
-                    <span class="site-state-item-count">6</span>
+                      
+                    
+                    <span class="site-state-item-count">7</span>
                     <span class="site-state-item-name">标签</span>
                   </a>
                 </div>
@@ -1980,7 +2196,7 @@ hexo clean &amp;&amp; hexo g &amp;&amp; hexo s
       <i class="fa fa-coffee"></i>
     </span>
     
-    <span title="站点阅读时长">3 分钟</span>
+    <span title="站点阅读时长">4 分钟</span>
   
 </div>
 
