@@ -469,7 +469,7 @@
                 
                   <span class="post-meta-item-text">本文字数：</span>
                 
-                <span title="本文字数">4.3k</span>
+                <span title="本文字数">4.5k</span>
               
 
               
@@ -504,7 +504,7 @@
 
       
         <h4 id="一、需求"><a href="#一、需求" class="headerlink" title="一、需求"></a>一、需求</h4><p>将指定目录下的特定格式的文件拷贝到指定目录下</p>
-<h4 id="二、代码"><a href="#二、代码" class="headerlink" title="二、代码"></a>二、代码</h4><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span>! /bin/bash</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span>需要传入两个参数</span><br><span class="line">if [ $# -ne 3 ]; then</span><br><span class="line">echo "USAGE: sh $0 srcPath targetPath fileReg"</span><br><span class="line">echo "eg: sh $0 /mnt/bigdan1 / '*.txt'"</span><br><span class="line">exit 1</span><br><span class="line">fi</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span>获取两个参数</span><br><span class="line">srcPath=$1</span><br><span class="line">targetPath=$2</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span>判断传入的两个参数是否存在</span><br><span class="line">if [ ! -d "$srcPath" ]; then</span><br><span class="line">echo "$srcPath does not exist"</span><br><span class="line">exit 1</span><br><span class="line">fi</span><br><span class="line"></span><br><span class="line">if [ ! -d "$targetPath" ]; then</span><br><span class="line">echo "$targetPath does not exist"i</span><br><span class="line">exit 1</span><br><span class="line">fi</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span>第三个参数为正则表达式</span><br><span class="line">REG=$3</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span>获取srcPath下的所有文件</span><br><span class="line">for dir in $(ls $srcPath)</span><br><span class="line">do</span><br><span class="line">        if [[ $dir =~ $REG ]]; then #过滤出符合正则规则的文件</span><br><span class="line">		path=$srcPath$dir #拼凑文件路径</span><br><span class="line">		echo "begin copy $dir from  $srcPath to $targetPath...`date`"</span><br><span class="line">                cp -r $path $targetPath</span><br><span class="line">		echo "finish copy $dir from $srcPath to $targetPath! `date`"</span><br><span class="line">        fi</span><br><span class="line">done</span><br><span class="line"></span><br><span class="line">exit 0</span><br></pre></td></tr></table></figure>
+<h4 id="二、代码"><a href="#二、代码" class="headerlink" title="二、代码"></a>二、代码</h4><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash">! /bin/bash</span></span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash">需要传入两个参数</span></span><br><span class="line">if [ $# -ne 3 ]; then</span><br><span class="line">echo "USAGE: sh $0 srcPath targetPath fileReg"</span><br><span class="line">echo "eg: sh $0 /mnt/bigdan1 / '*.txt'"</span><br><span class="line">exit 1</span><br><span class="line">fi</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash">获取两个参数</span></span><br><span class="line">srcPath=$1</span><br><span class="line">targetPath=$2</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash">判断传入的两个参数是否存在</span></span><br><span class="line">if [ ! -d "$srcPath" ]; then</span><br><span class="line">echo "$srcPath does not exist"</span><br><span class="line">exit 1</span><br><span class="line">fi</span><br><span class="line"></span><br><span class="line">if [ ! -d "$targetPath" ]; then</span><br><span class="line">echo "$targetPath does not exist"i</span><br><span class="line">exit 1</span><br><span class="line">fi</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash">第三个参数为正则表达式</span></span><br><span class="line">REG=$3</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash">获取srcPath下的所有文件</span></span><br><span class="line">for dir in $(ls $srcPath)</span><br><span class="line">do</span><br><span class="line">        if [[ $dir =~ $REG ]]; then #过滤出符合正则规则的文件</span><br><span class="line">		path=$srcPath$dir #拼凑文件路径</span><br><span class="line">		echo "begin copy $dir from  $srcPath to $targetPath...`date`"</span><br><span class="line">                cp -r $path $targetPath</span><br><span class="line">		echo "finish copy $dir from $srcPath to $targetPath! `date`"</span><br><span class="line">        fi</span><br><span class="line">done</span><br><span class="line"></span><br><span class="line">exit 0</span><br></pre></td></tr></table></figure>
 <h4 id="三、知识点"><a href="#三、知识点" class="headerlink" title="三、知识点"></a>三、知识点</h4><p>① shell中正则匹配需要在<code>[[ ]]</code>内进行；</p>
 <p>② shell中使用 <code>=～</code> 完成正则匹配。</p>
 <h4 id="四、演示"><a href="#四、演示" class="headerlink" title="四、演示"></a>四、演示</h4><p><img src="/2019/05/10/Shell脚本：批量拷贝/bashCP_right.gif" alt></p>
@@ -629,7 +629,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">18</span>
+                    <span class="site-state-item-count">19</span>
                     <span class="site-state-item-name">日志</span>
                   </a>
                 </div>
@@ -688,7 +688,9 @@
                     
                       
                     
-                    <span class="site-state-item-count">21</span>
+                      
+                    
+                    <span class="site-state-item-count">22</span>
                     <span class="site-state-item-name">分类</span>
                   </a>
                 </div>
@@ -737,7 +739,9 @@
                     
                       
                     
-                    <span class="site-state-item-count">16</span>
+                      
+                    
+                    <span class="site-state-item-count">17</span>
                     <span class="site-state-item-name">标签</span>
                   </a>
                 </div>
