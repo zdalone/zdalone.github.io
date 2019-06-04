@@ -108,7 +108,7 @@
 <meta property="og:image" content="https://zdalone.github.io/2019/06/04/Java试题摘选-1/2.png">
 <meta property="og:image" content="https://zdalone.github.io/2019/06/04/Java试题摘选-1/3.png">
 <meta property="og:image" content="https://zdalone.github.io/2019/06/04/Java试题摘选-1/4.png">
-<meta property="og:updated_time" content="2019-06-04T01:19:52.818Z">
+<meta property="og:updated_time" content="2019-06-04T01:24:03.820Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Java试题摘选-1">
 <meta name="twitter:description" content="1.下面代码输出值？  1234567891011public class Demo &amp;#123;    public static void main(String[] args) &amp;#123;        int x = 4;        System.out.println(&quot;value is &quot; + ((x &amp;gt; 4) ? 99.9 : 9));    &amp;#125;&amp;#125;">
@@ -394,7 +394,7 @@
                 
               
 
-              <time title="创建时间：2019-06-04 09:12:16 / 修改时间：09:19:52" itemprop="dateCreated datePublished" datetime="2019-06-04T09:12:16+08:00">2019-06-04</time>
+              <time title="创建时间：2019-06-04 09:12:16 / 修改时间：09:24:03" itemprop="dateCreated datePublished" datetime="2019-06-04T09:12:16+08:00">2019-06-04</time>
             
 
             
@@ -459,7 +459,7 @@
                 
                   <span class="post-meta-item-text">本文字数：</span>
                 
-                <span title="本文字数">6.3k</span>
+                <span title="本文字数">8.4k</span>
               
 
               
@@ -473,7 +473,7 @@
                 
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
-                <span title="阅读时长">6 分钟</span>
+                <span title="阅读时长">8 分钟</span>
               
             </div>
           
@@ -507,31 +507,7 @@
 <p><code>static{}代码段先于main函数运行，且static{}代码段按顺序执行！</code></p>
 <font size="5"> 3.下面程序输出为？</font>
 
-<p>`</p>
-<p>public class Demo {</p>
-<pre><code>public static int x = 100;
-
-public static void main(String[] args) {
-
-    Demo3 hs1 = new Demo3();
-
-    hs1.x++;
-
-    Demo3 hs2 = new Demo3();
-
-    hs2.x++;
-
-    hs1 = new Demo3();
-
-    hs1.x++;
-
-    Demo3.x--;
-
-    System.out.println(&quot;x=&quot; + x);
-
-}
-</code></pre><p>}</p>
-<p>`</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Demo</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">int</span> x = <span class="number">100</span>;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">        Demo3 hs1 = <span class="keyword">new</span> Demo3();</span><br><span class="line"></span><br><span class="line">        hs1.x++;</span><br><span class="line"></span><br><span class="line">        Demo3 hs2 = <span class="keyword">new</span> Demo3();</span><br><span class="line"></span><br><span class="line">        hs2.x++;</span><br><span class="line"></span><br><span class="line">        hs1 = <span class="keyword">new</span> Demo3();</span><br><span class="line"></span><br><span class="line">        hs1.x++;</span><br><span class="line"></span><br><span class="line">        Demo3.x--;</span><br><span class="line"></span><br><span class="line">        System.out.println(<span class="string">"x="</span> + x);</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>==&gt;<img src="/2019/06/04/Java试题摘选-1/4.png" alt="image"></p>
 <p><code>static变量为所有对象共有</code></p>
 
