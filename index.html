@@ -390,7 +390,7 @@
                 
               
 
-              <time title="创建时间：2019-06-15 15:19:22 / 修改时间：15:30:37" itemprop="dateCreated datePublished" datetime="2019-06-15T15:19:22+08:00">2019-06-15</time>
+              <time title="创建时间：2019-06-15 15:19:22 / 修改时间：16:34:10" itemprop="dateCreated datePublished" datetime="2019-06-15T15:19:22+08:00">2019-06-15</time>
             
 
             
@@ -400,6 +400,38 @@
             
           </span>
 
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/语言/" itemprop="url" rel="index"><span itemprop="name">语言</span></a></span>
+
+                
+                
+                  ，
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/语言/Java/" itemprop="url" rel="index"><span itemprop="name">Java</span></a></span>
+
+                
+                
+                  ，
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/语言/Java/多线程/" itemprop="url" rel="index"><span itemprop="name">多线程</span></a></span>
+
+                
+                
+              
+            </span>
           
 
           
@@ -476,6 +508,7 @@ awaitTermination(long timeOut,TimeUnit unit)方法有两个参数，一个是tim
 然后返回true（shutdown请求后所有任务执行完毕）或者false（已超时）。
 </code></pre><p>修改后的代码：</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">createResultMap</span><span class="params">(<span class="keyword">int</span> poolSize, Set&lt;String&gt; midNodeSet,</span></span></span><br><span class="line"><span class="function"><span class="params">    ConcurrentHashMap&lt;String, Bag&gt; concurrentMap, AsteriaGraphClient graphClient, String startNodeValue,</span></span></span><br><span class="line"><span class="function"><span class="params">    RelationCondition.RelationConditionBuilder builder)</span></span></span><br><span class="line"><span class="function">    <span class="keyword">throws</span> AsteriaGraphException </span>&#123;</span><br><span class="line">    <span class="comment">//固定数量的线程池</span></span><br><span class="line">    ExecutorService pool = Executors.newFixedThreadPool(poolSize);</span><br><span class="line">    RelationshipIterator rels = <span class="keyword">null</span>;</span><br><span class="line">    <span class="keyword">for</span> (String midNode : midNodeSet) &#123;<span class="comment">//遍历每一个中间节点，对每一个中间节点启动一个查询线程</span></span><br><span class="line">        <span class="comment">//获取到每个中间节点的所有符合builder配置的直连边的遍历器</span></span><br><span class="line">        rels =</span><br><span class="line">            Utils.getDirectedRelsIterator(graphClient, Utils.getNode(graphClient, Constant.UID, midNode), builder);</span><br><span class="line">       <span class="comment">//启动一个查询线程</span></span><br><span class="line">        pool.execute(<span class="keyword">new</span> TraversalThread(rels, midNode, startNodeValue, concurrentMap, midNodeSet));</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">//关闭线程池</span></span><br><span class="line">    pool.shutdownNow();   </span><br><span class="line">    <span class="keyword">try</span> &#123;</span><br><span class="line">        <span class="keyword">if</span>(!pool.awaitTermination(<span class="number">1</span>, TimeUnit.MINUTES))&#123;<span class="comment">//因为我们对于查询时间的要求是秒级的，所以这里的超时时间设置为1分钟</span></span><br><span class="line">               logger.error(<span class="string">"查询超时!"</span>);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125; <span class="keyword">catch</span> (InterruptedException e) &#123;</span><br><span class="line">        logger.error(<span class="string">"Exception Happened during finding mayknow nodes!"</span>,e);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
           
         
       
@@ -2511,7 +2544,9 @@ awaitTermination(long timeOut,TimeUnit unit)方法有两个参数，一个是tim
                     
                       
                     
-                    <span class="site-state-item-count">25</span>
+                      
+                    
+                    <span class="site-state-item-count">26</span>
                     <span class="site-state-item-name">分类</span>
                   </a>
                 </div>
@@ -2566,7 +2601,9 @@ awaitTermination(long timeOut,TimeUnit unit)方法有两个参数，一个是tim
                     
                       
                     
-                    <span class="site-state-item-count">19</span>
+                      
+                    
+                    <span class="site-state-item-count">20</span>
                     <span class="site-state-item-name">标签</span>
                   </a>
                 </div>
