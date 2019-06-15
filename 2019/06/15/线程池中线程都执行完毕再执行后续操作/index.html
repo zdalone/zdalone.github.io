@@ -96,26 +96,17 @@
 
 
 
-  <meta name="description" content="1.创建一个用户执行命令：useradd  -d /usr/bigdan -m bigdan 创建之后可以在/usr目录下发现bigdan目录：  2.vim /etc/passwd执行命令：vim /etc/passwd 定位到最后一行，修改如下：  将uid与gid都改为0，与root的一致，root的信息在第一行，如下：  3.su bigdan执行命令 ：su bigdan  发现用户名还">
-<meta name="keywords" content="Linux">
+  <meta name="description" content="问题在AsteriaGraph上查询MayKnow节点时，为了提高查询性能，我们决定使用线程池启动多个查询线程来提高查询效率。我们使用固定大小的线程池，每个线程在查询过程中会将查询结果存放到一个公共的结构中，核心代码如下： 1234567891011121314151617181920/* *使用固定大小的线程池启动多个查询线程计算查询结果 */private static void create">
 <meta property="og:type" content="article">
-<meta property="og:title" content="linux下设置登录后门">
-<meta property="og:url" content="https://zdalone.github.io/2019/05/31/linux下设置登录后门/index.html">
+<meta property="og:title" content="线程池中线程都执行完毕再执行后续操作">
+<meta property="og:url" content="https://zdalone.github.io/2019/06/15/线程池中线程都执行完毕再执行后续操作/index.html">
 <meta property="og:site_name" content="Bigdan的博客">
-<meta property="og:description" content="1.创建一个用户执行命令：useradd  -d /usr/bigdan -m bigdan 创建之后可以在/usr目录下发现bigdan目录：  2.vim /etc/passwd执行命令：vim /etc/passwd 定位到最后一行，修改如下：  将uid与gid都改为0，与root的一致，root的信息在第一行，如下：  3.su bigdan执行命令 ：su bigdan  发现用户名还">
+<meta property="og:description" content="问题在AsteriaGraph上查询MayKnow节点时，为了提高查询性能，我们决定使用线程池启动多个查询线程来提高查询效率。我们使用固定大小的线程池，每个线程在查询过程中会将查询结果存放到一个公共的结构中，核心代码如下： 1234567891011121314151617181920/* *使用固定大小的线程池启动多个查询线程计算查询结果 */private static void create">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:image" content="https://zdalone.github.io/2019/05/31/linux下设置登录后门/1.png">
-<meta property="og:image" content="https://zdalone.github.io/2019/05/31/linux下设置登录后门/2.png">
-<meta property="og:image" content="https://zdalone.github.io/2019/05/31/linux下设置登录后门/3.png">
-<meta property="og:image" content="https://zdalone.github.io/2019/05/31/linux下设置登录后门/4.png">
-<meta property="og:image" content="https://zdalone.github.io/2019/05/31/linux下设置登录后门/5.png">
-<meta property="og:image" content="https://zdalone.github.io/2019/05/31/linux下设置登录后门/6.png">
-<meta property="og:image" content="https://zdalone.github.io/2019/05/31/linux下设置登录后门/7.png">
-<meta property="og:updated_time" content="2019-05-31T09:55:16.990Z">
+<meta property="og:updated_time" content="2019-06-15T07:30:37.072Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="linux下设置登录后门">
-<meta name="twitter:description" content="1.创建一个用户执行命令：useradd  -d /usr/bigdan -m bigdan 创建之后可以在/usr目录下发现bigdan目录：  2.vim /etc/passwd执行命令：vim /etc/passwd 定位到最后一行，修改如下：  将uid与gid都改为0，与root的一致，root的信息在第一行，如下：  3.su bigdan执行命令 ：su bigdan  发现用户名还">
-<meta name="twitter:image" content="https://zdalone.github.io/2019/05/31/linux下设置登录后门/1.png">
+<meta name="twitter:title" content="线程池中线程都执行完毕再执行后续操作">
+<meta name="twitter:description" content="问题在AsteriaGraph上查询MayKnow节点时，为了提高查询性能，我们决定使用线程池启动多个查询线程来提高查询效率。我们使用固定大小的线程池，每个线程在查询过程中会将查询结果存放到一个公共的结构中，核心代码如下： 1234567891011121314151617181920/* *使用固定大小的线程池启动多个查询线程计算查询结果 */private static void create">
 
 
 
@@ -123,7 +114,7 @@
 
   
   
-  <link rel="canonical" href="https://zdalone.github.io/2019/05/31/linux下设置登录后门/">
+  <link rel="canonical" href="https://zdalone.github.io/2019/06/15/线程池中线程都执行完毕再执行后续操作/">
 
 
 
@@ -133,7 +124,7 @@
   };
 </script>
 
-  <title>linux下设置登录后门 | Bigdan的博客</title>
+  <title>线程池中线程都执行完毕再执行后续操作 | Bigdan的博客</title>
   
 
 
@@ -354,7 +345,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://zdalone.github.io/2019/05/31/linux下设置登录后门/">
+    <link itemprop="mainEntityOfPage" href="https://zdalone.github.io/2019/06/15/线程池中线程都执行完毕再执行后续操作/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Bigdan">
@@ -371,7 +362,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">linux下设置登录后门
+          <h1 class="post-title" itemprop="name headline">线程池中线程都执行完毕再执行后续操作
 
               
             
@@ -397,7 +388,7 @@
                 
               
 
-              <time title="创建时间：2019-05-31 13:37:42 / 修改时间：17:55:16" itemprop="dateCreated datePublished" datetime="2019-05-31T13:37:42+08:00">2019-05-31</time>
+              <time title="创建时间：2019-06-15 15:19:22 / 修改时间：15:30:37" itemprop="dateCreated datePublished" datetime="2019-06-15T15:19:22+08:00">2019-06-15</time>
             
 
             
@@ -407,38 +398,6 @@
             
           </span>
 
-          
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/系统/" itemprop="url" rel="index"><span itemprop="name">系统</span></a></span>
-
-                
-                
-                  ，
-                
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/系统/Linux/" itemprop="url" rel="index"><span itemprop="name">Linux</span></a></span>
-
-                
-                
-                  ，
-                
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/系统/Linux/设置/" itemprop="url" rel="index"><span itemprop="name">设置</span></a></span>
-
-                
-                
-              
-            </span>
           
 
           
@@ -462,7 +421,7 @@
                 
                   <span class="post-meta-item-text">本文字数：</span>
                 
-                <span title="本文字数">2k</span>
+                <span title="本文字数">7.6k</span>
               
 
               
@@ -476,7 +435,7 @@
                 
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
-                <span title="阅读时长">2 分钟</span>
+                <span title="阅读时长">7 分钟</span>
               
             </div>
           
@@ -496,28 +455,23 @@
       
 
       
-        <h2 id="1-创建一个用户"><a href="#1-创建一个用户" class="headerlink" title="1.创建一个用户"></a>1.创建一个用户</h2><p>执行命令：<code>useradd  -d /usr/bigdan -m bigdan</code></p>
-<p>创建之后可以在/usr目录下发现bigdan目录：</p>
-<p><img src="/2019/05/31/linux下设置登录后门/1.png" alt="1.png"></p>
-<h2 id="2-vim-etc-passwd"><a href="#2-vim-etc-passwd" class="headerlink" title="2.vim /etc/passwd"></a>2.vim /etc/passwd</h2><p>执行命令：<code>vim /etc/passwd</code></p>
-<p>定位到最后一行，修改如下：</p>
-<p><img src="/2019/05/31/linux下设置登录后门/2.png" alt="2.png"></p>
-<p>将uid与gid都改为0，与root的一致，root的信息在第一行，如下：</p>
-<p><img src="/2019/05/31/linux下设置登录后门/3.png" alt="3.png"></p>
-<h2 id="3-su-bigdan"><a href="#3-su-bigdan" class="headerlink" title="3.su bigdan"></a>3.su bigdan</h2><p>执行命令 ：<code>su bigdan</code></p>
-<p><img src="/2019/05/31/linux下设置登录后门/4.png" alt="4.png"></p>
-<p>发现用户名还是root，怎么回事？</p>
-<h2 id="4-whoami"><a href="#4-whoami" class="headerlink" title="4.whoami?"></a>4.whoami?</h2><p>执行命令：<code>whoami</code></p>
-<p><img src="/2019/05/31/linux下设置登录后门/5.png" alt="5.png"></p>
-<p>果然是root用户，可是我已经su bigdan了啊？为啥还显示root呢？</p>
-<h2 id="5-cd"><a href="#5-cd" class="headerlink" title="5.cd ~"></a>5.cd ~</h2><p>试试命令：<code>cd ~</code></p>
-<p><img src="/2019/05/31/linux下设置登录后门/6.png" alt="6.png"></p>
-<p>额，home目录怎么是/usr/bigdan呢？我再切换到root用户，看看home目录是什么。</p>
-<p><img src="/2019/05/31/linux下设置登录后门/7.png" alt="7.png"></p>
-<p>好吧，root用户的home目录是/root，这下全明白了！</p>
-<h2 id="6-总结一下"><a href="#6-总结一下" class="headerlink" title="6.总结一下"></a>6.总结一下</h2><p>修改/etc/passwd文件后，bigdan与root用户的uid与gid都一样，系统会将bigdan看成root，因为linux的是根据uid与gid来识别用户的，所以whoami命令会将bigdan也看成root。但是在创建bigdan时我们指定bigdan的home目录是/usr/bigdan，只有这个是不好变更的，所以只能通过home目录来区分用户的真正身份。</p>
-<p>这也是linux系统下的一个后门，大家小心使用。</p>
+        <h2 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h2><p>在AsteriaGraph上查询MayKnow节点时，为了提高查询性能，我们决定使用线程池启动多个查询线程来提高查询效率。我们使用固定大小的线程池，每个线程在查询过程中会将查询结果存放到一个公共的结构中，核心代码如下：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment"> *使用固定大小的线程池启动多个查询线程计算查询结果</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="function"><span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">createResultMap</span><span class="params">(<span class="keyword">int</span> poolSize, Set&lt;String&gt; midNodeSet,</span></span></span><br><span class="line"><span class="function"><span class="params">    ConcurrentHashMap&lt;String, Bag&gt; concurrentMap, AsteriaGraphClient graphClient, String startNodeValue,</span></span></span><br><span class="line"><span class="function"><span class="params">    RelationCondition.RelationConditionBuilder builder)</span></span></span><br><span class="line"><span class="function">    <span class="keyword">throws</span> AsteriaGraphException </span>&#123;</span><br><span class="line">    <span class="comment">//固定数量的线程池</span></span><br><span class="line">    ExecutorService pool = Executors.newFixedThreadPool(poolSize);</span><br><span class="line">    RelationshipIterator rels = <span class="keyword">null</span>;</span><br><span class="line">    <span class="keyword">for</span> (String midNode : midNodeSet) &#123;<span class="comment">//遍历每一个中间节点，对每一个中间节点启动一个查询线程</span></span><br><span class="line">        <span class="comment">//获取到每个中间节点的所有符合builder配置的直连边的遍历器</span></span><br><span class="line">        rels =</span><br><span class="line">            Utils.getDirectedRelsIterator(graphClient, Utils.getNode(graphClient, Constant.UID, midNode), builder);</span><br><span class="line">       <span class="comment">//启动一个查询线程</span></span><br><span class="line">        pool.execute(<span class="keyword">new</span> TraversalThread(rels, midNode, startNodeValue, concurrentMap, midNodeSet));</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">//关闭线程池</span></span><br><span class="line">    pool.shutdownNow();  </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>在实际环境经过多次验证，我们发现有个现象：每次返回的结果数量可能不一致！再定位到代码，我们觉得问题的原因应该是这样的：在所有查询线程还未全部执行完毕时就输出了查询结果。</p>
+<h2 id="解决方法"><a href="#解决方法" class="headerlink" title="解决方法"></a>解决方法</h2><p>解决问题的方法就是需要保证在代码<code>pool.shutdownNow()</code>执行之后保证所有线程池内的所有线程都执行完毕才执行后续的代码。</p>
+<p>   查阅资料后发现有两种解决思路：</p>
+<p>   ①闭锁（CountDownLatch）；</p>
+<p>   ②线程池自身的方法（awaitTermination）来判断所有线程是否执行完毕。</p>
+<p>   因为①的效率不是很好，我们这里着重讲解方法②。</p>
+<pre><code>awaitTermination方法:
+awaitTermination(long timeOut,TimeUnit unit)方法有两个参数，一个是timeout（超时时间），另一个是unit（时间单位）。调用该方法后，当前线程阻塞，直到
+1、等所有已提交的任务（包括正在跑的和队列中等待的）执行完毕
+2、或者到达超时时间
+3、或者线程被中断，抛出InterruptedException
 
+然后返回true（shutdown请求后所有任务执行完毕）或者false（已超时）。
+</code></pre><p>修改后的代码：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">createResultMap</span><span class="params">(<span class="keyword">int</span> poolSize, Set&lt;String&gt; midNodeSet,</span></span></span><br><span class="line"><span class="function"><span class="params">    ConcurrentHashMap&lt;String, Bag&gt; concurrentMap, AsteriaGraphClient graphClient, String startNodeValue,</span></span></span><br><span class="line"><span class="function"><span class="params">    RelationCondition.RelationConditionBuilder builder)</span></span></span><br><span class="line"><span class="function">    <span class="keyword">throws</span> AsteriaGraphException </span>&#123;</span><br><span class="line">    <span class="comment">//固定数量的线程池</span></span><br><span class="line">    ExecutorService pool = Executors.newFixedThreadPool(poolSize);</span><br><span class="line">    RelationshipIterator rels = <span class="keyword">null</span>;</span><br><span class="line">    <span class="keyword">for</span> (String midNode : midNodeSet) &#123;<span class="comment">//遍历每一个中间节点，对每一个中间节点启动一个查询线程</span></span><br><span class="line">        <span class="comment">//获取到每个中间节点的所有符合builder配置的直连边的遍历器</span></span><br><span class="line">        rels =</span><br><span class="line">            Utils.getDirectedRelsIterator(graphClient, Utils.getNode(graphClient, Constant.UID, midNode), builder);</span><br><span class="line">       <span class="comment">//启动一个查询线程</span></span><br><span class="line">        pool.execute(<span class="keyword">new</span> TraversalThread(rels, midNode, startNodeValue, concurrentMap, midNodeSet));</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">//关闭线程池</span></span><br><span class="line">    pool.shutdownNow();   </span><br><span class="line">    <span class="keyword">try</span> &#123;</span><br><span class="line">        <span class="keyword">if</span>(!pool.awaitTermination(<span class="number">1</span>, TimeUnit.MINUTES))&#123;<span class="comment">//因为我们对于查询时间的要求是秒级的，所以这里的超时时间设置为1分钟</span></span><br><span class="line">               logger.error(<span class="string">"查询超时!"</span>);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125; <span class="keyword">catch</span> (InterruptedException e) &#123;</span><br><span class="line">        logger.error(<span class="string">"Exception Happened during finding mayknow nodes!"</span>,e);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
       
     </div>
 
@@ -538,12 +492,6 @@
 
     <footer class="post-footer">
       
-        <div class="post-tags">
-          
-            <a href="/tags/Linux/" rel="tag"># Linux</a>
-          
-        </div>
-      
 
       
       
@@ -553,8 +501,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2019/05/29/没有网络如何在虚拟机上的centos安装lrzsz/" rel="next" title="没有网络如何在虚拟机上的CentOS安装lrzsz">
-                <i class="fa fa-chevron-left"></i> 没有网络如何在虚拟机上的CentOS安装lrzsz
+              <a href="/2019/06/11/mapreduce-job-user-classpath-first/" rel="next" title="mapreduce.job.user.classpath.first">
+                <i class="fa fa-chevron-left"></i> mapreduce.job.user.classpath.first
               </a>
             
           </div>
@@ -562,10 +510,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2019/06/01/xshell设置右键粘贴/" rel="prev" title="xshell设置右键粘贴">
-                xshell设置右键粘贴 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -796,7 +740,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-创建一个用户"><span class="nav-number">1.</span> <span class="nav-text">1.创建一个用户</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-vim-etc-passwd"><span class="nav-number">2.</span> <span class="nav-text">2.vim /etc/passwd</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-su-bigdan"><span class="nav-number">3.</span> <span class="nav-text">3.su bigdan</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-whoami"><span class="nav-number">4.</span> <span class="nav-text">4.whoami?</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#5-cd"><span class="nav-number">5.</span> <span class="nav-text">5.cd ~</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#6-总结一下"><span class="nav-number">6.</span> <span class="nav-text">6.总结一下</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#问题"><span class="nav-number">1.</span> <span class="nav-text">问题</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#解决方法"><span class="nav-number">2.</span> <span class="nav-text">解决方法</span></a></li></ol></div>
             
 
           </div>
