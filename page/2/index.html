@@ -345,6 +345,208 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://zdalone.github.io/2019/06/10/map未完全运行结束就启动reduce的异常与解决方法/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Bigdan">
+      <meta itemprop="description" content="理想三旬">
+      <meta itemprop="image" content="/images/lufei.jpeg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Bigdan的博客">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                
+                <a href="/2019/06/10/map未完全运行结束就启动reduce的异常与解决方法/" class="post-title-link" itemprop="url">map未完全运行结束就启动reduce的异常与解决方法</a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+
+              
+                
+              
+
+              <time title="创建时间：2019-06-10 09:42:12 / 修改时间：09:50:10" itemprop="dateCreated datePublished" datetime="2019-06-10T09:42:12+08:00">2019-06-10</time>
+            
+
+            
+              
+
+              
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/大数据/" itemprop="url" rel="index"><span itemprop="name">大数据</span></a></span>
+
+                
+                
+                  ，
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/大数据/hadoop/" itemprop="url" rel="index"><span itemprop="name">hadoop</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+            
+          
+
+          
+          
+
+          
+
+          
+            <div class="post-symbolscount">
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">本文字数：</span>
+                
+                <span title="本文字数">1.5k</span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">1 分钟</span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>今日运行噪音过滤MR，反复几次，map运行至99.8%reduce运行至16%时，程序僵死，持续2个多小时，忍无可忍，kill之。截图如下：</p>
+<p><img src="/2019/06/10/map未完全运行结束就启动reduce的异常与解决方法/hadoopexcep.png" alt="exception"></p>
+<p>遂发sos与“科学家”，小论之，迎刃而解。解法：进配置文件，添加参数“mapreduce.job.reduce.slowstart.completedmaps”。参数细节请客官观之：</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">property</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">name</span>&gt;</span>mapreduce.job.reduce.slowstart.completedmaps<span class="tag">&lt;/<span class="name">name</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">value</span>&gt;</span>1.0<span class="tag">&lt;/<span class="name">value</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">property</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p>释义：map100%运行完后才启动reduce。</p>
+<p><img src="/2019/06/10/map未完全运行结束就启动reduce的异常与解决方法/done.png" alt="done"></p>
+<p>(2017-03-09)</p>
+
+          
+        
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+      
+    
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="https://zdalone.github.io/2019/06/05/启动jobhistoryserver/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -2233,240 +2435,6 @@
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://zdalone.github.io/2019/05/21/时间字符串格式转换/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Bigdan">
-      <meta itemprop="description" content="理想三旬">
-      <meta itemprop="image" content="/images/lufei.jpeg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Bigdan的博客">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                
-                <a href="/2019/05/21/时间字符串格式转换/" class="post-title-link" itemprop="url">时间字符串格式转换</a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-
-            
-            
-            
-
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-
-              
-                
-              
-
-              <time title="创建时间：2019-05-21 09:15:54" itemprop="dateCreated datePublished" datetime="2019-05-21T09:15:54+08:00">2019-05-21</time>
-            
-
-            
-              
-
-              
-                
-                <span class="post-meta-divider">|</span>
-                
-
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">更新于</span>
-                
-                <time title="修改时间：2019-05-24 08:33:35" itemprop="dateModified" datetime="2019-05-24T08:33:35+08:00">2019-05-24</time>
-              
-            
-          </span>
-
-          
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/语言/" itemprop="url" rel="index"><span itemprop="name">语言</span></a></span>
-
-                
-                
-                  ，
-                
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/语言/Java/" itemprop="url" rel="index"><span itemprop="name">Java</span></a></span>
-
-                
-                
-                  ，
-                
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/语言/Java/时间/" itemprop="url" rel="index"><span itemprop="name">时间</span></a></span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-            
-          
-
-          
-          
-
-          
-
-          
-            <div class="post-symbolscount">
-              
-
-              
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-file-word-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">本文字数：</span>
-                
-                <span title="本文字数">1.5k</span>
-              
-
-              
-                <span class="post-meta-divider">|</span>
-              
-
-              
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-clock-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
-                
-                <span title="阅读时长">1 分钟</span>
-              
-            </div>
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p><strong>昨天有个需求： </strong></p>
-<p>原始数据的时间是以“yyyy - MM - dd HH : mm : ss”格式    (pattern)表示的(也会有错误数据，即非正确格式)，现在需要将其转换成“yyMMddHHmm”格式(pattern)<br>当然最简单的办法就是操作String，切分拼接，但是有没有更简洁的办法呢？</p>
-<p>问题可以分成以下几步来处理：<br><b></b></p>
-<ol>
-<li>对于输入的格式数据，判断格式是否正确(即以“yyyy - MM - dd HH : mm : ss”表示)；</li>
-<li>对于正确格式的原始时间格式将其转化成Date对象(java中对于时间的表示类)；</li>
-<li>使用新的格式表示该Date对象。<br></li>
-</ol>
-<p>处理过程：</p>
-<p><strong>A.使用apache提供的第三方扩展类库，org.apache.commons.lang.time包下的DateUtils 类处理时间格式匹配问题以及对象转换问题：</strong><br><code>String pattern[] = {&quot;yyyy-MM-dd HH:mm:ss&quot;};</code></p>
-<p><code>DateUtils.parseDate(要匹配的时间字符串, pattern);</code></p>
-<p>=========================运行如下=========================</p>
-<p>如果不匹配会抛异常<br><img src="/2019/05/21/时间字符串格式转换/1.png" alt="image"><br>如果匹配则会返回该字符串对于的Date对象的值<br><img src="/2019/05/21/时间字符串格式转换/2.png" alt="image"></p>
-<p><strong> B.使用SimpleDateFormat将Date对象转换成期望格式</strong></p>
-<p><code>SimpleDateFormat sdf = new SimpleDateFormat(&quot;yyMMddHHmm&quot;);</code></p>
-<p><code>String expectedTime = sdf.format(date);</code></p>
-<p>=========================运行如下=========================</p>
-<p><img src="/2019/05/21/时间字符串格式转换/3.png" alt="image"></p>
-<p><strong>将该实现封装成一个函数</strong></p>
-<p><img src="/2019/05/21/时间字符串格式转换/4.png" alt="image"></p>
-
-          
-        
-      
-    </div>
-
-    
-
-    
-    
-    
-
-    
-
-    
-      
-    
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
   </section>
 
   
@@ -2515,7 +2483,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">32</span>
+                    <span class="site-state-item-count">33</span>
                     <span class="site-state-item-name">日志</span>
                   </a>
                 </div>
@@ -2661,7 +2629,9 @@
                     
                       
                     
-                    <span class="site-state-item-count">27</span>
+                      
+                    
+                    <span class="site-state-item-count">28</span>
                     <span class="site-state-item-name">标签</span>
                   </a>
                 </div>
@@ -2715,7 +2685,7 @@
       <i class="fa fa-area-chart"></i>
     </span>
     
-    <span title="站点总字数">16k</span>
+    <span title="站点总字数">17k</span>
   
 
   
@@ -2724,7 +2694,7 @@
       <i class="fa fa-coffee"></i>
     </span>
     
-    <span title="站点阅读时长">15 分钟</span>
+    <span title="站点阅读时长">16 分钟</span>
   
 </div>
 

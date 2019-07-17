@@ -345,6 +345,242 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://zdalone.github.io/2019/05/08/Hexo-安装APlayer音乐播放器/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Bigdan">
+      <meta itemprop="description" content="理想三旬">
+      <meta itemprop="image" content="/images/lufei.jpeg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Bigdan的博客">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                
+                <a href="/2019/05/08/Hexo-安装APlayer音乐播放器/" class="post-title-link" itemprop="url">Hexo:安装APlayer音乐播放器</a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+
+              
+                
+              
+
+              <time title="创建时间：2019-05-08 13:46:18" itemprop="dateCreated datePublished" datetime="2019-05-08T13:46:18+08:00">2019-05-08</time>
+            
+
+            
+              
+
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">更新于</span>
+                
+                <time title="修改时间：2019-05-24 08:29:06" itemprop="dateModified" datetime="2019-05-24T08:29:06+08:00">2019-05-24</time>
+              
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/工具/" itemprop="url" rel="index"><span itemprop="name">工具</span></a></span>
+
+                
+                
+                  ，
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/工具/Hexo/" itemprop="url" rel="index"><span itemprop="name">Hexo</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+            
+          
+
+          
+          
+
+          
+
+          
+            <div class="post-symbolscount">
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">本文字数：</span>
+                
+                <span title="本文字数">2k</span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">2 分钟</span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h4 id="step1"><a href="#step1" class="headerlink" title="step1"></a>step1</h4><pre><code>git clone https://github.com/MoePlayer/APlayer.git
+</code></pre><h4 id="step2"><a href="#step2" class="headerlink" title="step2"></a>step2</h4><pre><code>cd APlayer
+cp -r dist 你的博客主目录/themes/next/source
+</code></pre><h4 id="step3"><a href="#step3" class="headerlink" title="step3"></a>step3</h4><pre><code>cd 你的博客主目录/themes/next/source/dist
+touch music.js
+</code></pre><h4 id="step4"><a href="#step4" class="headerlink" title="step4"></a>step4</h4><pre><code>vim music.js
+</code></pre><p>添加如下内容：</p>
+<pre><code>const ap = new APlayer({
+container: document.getElementById(&apos;aplayer&apos;),
+fixed: true,
+autoplay: true,
+audio: [
+  {
+    name: &quot;理想三旬&quot;,
+    artist: &apos;陈鸿宇&apos;,
+    url: &apos;http://www.ytmp3.cn/down/46483.mp3&apos;,
+    cover: &apos;http://cdnimg103.lizhi.fm/audio_cover/2016/04/12/27782248821326471_320x320.jpg&apos;,
+  }
+]
+});
+</code></pre><p>url处填写音乐外链；cover处填写该音乐播放时展示的照片的链接。</p>
+<h4 id="step5"><a href="#step5" class="headerlink" title="step5"></a>step5</h4><pre><code>vim 你的博客主目录/themes/next/layout/_layout.swig
+</code></pre><p>在<code>&lt;body&gt;&lt;/body&gt;</code>间添加如下内容：</p>
+<pre><code>&lt;link rel=&quot;stylesheet&quot; href=&quot;/dist/APlayer.min.css&quot;&gt;
+&lt;div id=&quot;aplayer&quot;&gt;&lt;/div&gt;
+&lt;script type=&quot;text/javascript&quot; src=&quot;/dist/APlayer.min.js&quot;&gt;&lt;/script&gt;
+&lt;script type=&quot;text/javascript&quot; src=&quot;/dist/music.js&quot;&gt;    &lt;/script&gt;
+</code></pre><h4 id="step6"><a href="#step6" class="headerlink" title="step6"></a>step6</h4><pre><code>cd 你的博客主目录
+hexo clean &amp;&amp; hexo g &amp;&amp; hexo s
+</code></pre>
+          
+        
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+      
+    
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="https://zdalone.github.io/2019/05/07/使用Myeclipse从GitHub上下载项目/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -792,7 +1028,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">32</span>
+                    <span class="site-state-item-count">33</span>
                     <span class="site-state-item-name">日志</span>
                   </a>
                 </div>
@@ -938,7 +1174,9 @@
                     
                       
                     
-                    <span class="site-state-item-count">27</span>
+                      
+                    
+                    <span class="site-state-item-count">28</span>
                     <span class="site-state-item-name">标签</span>
                   </a>
                 </div>
@@ -992,7 +1230,7 @@
       <i class="fa fa-area-chart"></i>
     </span>
     
-    <span title="站点总字数">16k</span>
+    <span title="站点总字数">17k</span>
   
 
   
@@ -1001,7 +1239,7 @@
       <i class="fa fa-coffee"></i>
     </span>
     
-    <span title="站点阅读时长">15 分钟</span>
+    <span title="站点阅读时长">16 分钟</span>
   
 </div>
 
