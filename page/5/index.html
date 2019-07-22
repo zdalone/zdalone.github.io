@@ -345,6 +345,227 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://zdalone.github.io/2019/05/10/Shell脚本：批量拷贝/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Bigdan">
+      <meta itemprop="description" content="理想三旬">
+      <meta itemprop="image" content="/images/lufei.jpeg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Bigdan的博客">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                
+                <a href="/2019/05/10/Shell脚本：批量拷贝/" class="post-title-link" itemprop="url">Shell脚本：批量拷贝</a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+
+              
+                
+              
+
+              <time title="创建时间：2019-05-10 16:25:20" itemprop="dateCreated datePublished" datetime="2019-05-10T16:25:20+08:00">2019-05-10</time>
+            
+
+            
+              
+
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">更新于</span>
+                
+                <time title="修改时间：2019-05-28 13:43:38" itemprop="dateModified" datetime="2019-05-28T13:43:38+08:00">2019-05-28</time>
+              
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/语言/" itemprop="url" rel="index"><span itemprop="name">语言</span></a></span>
+
+                
+                
+                  ，
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/语言/脚本/" itemprop="url" rel="index"><span itemprop="name">脚本</span></a></span>
+
+                
+                
+                  ，
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/语言/脚本/shell/" itemprop="url" rel="index"><span itemprop="name">shell</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+            
+          
+
+          
+          
+
+          
+
+          
+            <div class="post-symbolscount">
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">本文字数：</span>
+                
+                <span title="本文字数">4.3k</span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">4 分钟</span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h4 id="一、需求"><a href="#一、需求" class="headerlink" title="一、需求"></a>一、需求</h4><p>将指定目录下的特定格式的文件拷贝到指定目录下</p>
+<h4 id="二、代码"><a href="#二、代码" class="headerlink" title="二、代码"></a>二、代码</h4><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span>! /bin/bash</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span>需要传入两个参数</span><br><span class="line">if [ $# -ne 3 ]; then</span><br><span class="line">echo "USAGE: sh $0 srcPath targetPath fileReg"</span><br><span class="line">echo "eg: sh $0 /mnt/bigdan1 / '*.txt'"</span><br><span class="line">exit 1</span><br><span class="line">fi</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span>获取两个参数</span><br><span class="line">srcPath=$1</span><br><span class="line">targetPath=$2</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span>判断传入的两个参数是否存在</span><br><span class="line">if [ ! -d "$srcPath" ]; then</span><br><span class="line">echo "$srcPath does not exist"</span><br><span class="line">exit 1</span><br><span class="line">fi</span><br><span class="line"></span><br><span class="line">if [ ! -d "$targetPath" ]; then</span><br><span class="line">echo "$targetPath does not exist"i</span><br><span class="line">exit 1</span><br><span class="line">fi</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span>第三个参数为正则表达式</span><br><span class="line">REG=$3</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span>获取srcPath下的所有文件</span><br><span class="line">for dir in $(ls $srcPath)</span><br><span class="line">do</span><br><span class="line">        if [[ $dir =~ $REG ]]; then #过滤出符合正则规则的文件</span><br><span class="line">		path=$srcPath$dir #拼凑文件路径</span><br><span class="line">		echo "begin copy $dir from  $srcPath to $targetPath...`date`"</span><br><span class="line">                cp -r $path $targetPath</span><br><span class="line">		echo "finish copy $dir from $srcPath to $targetPath! `date`"</span><br><span class="line">        fi</span><br><span class="line">done</span><br><span class="line"></span><br><span class="line">exit 0</span><br></pre></td></tr></table></figure>
+<h4 id="三、知识点"><a href="#三、知识点" class="headerlink" title="三、知识点"></a>三、知识点</h4><p>① shell中正则匹配需要在<code>[[ ]]</code>内进行；</p>
+<p>② shell中使用 <code>=～</code> 完成正则匹配。</p>
+<h4 id="四、演示"><a href="#四、演示" class="headerlink" title="四、演示"></a>四、演示</h4><p><img src="/2019/05/10/Shell脚本：批量拷贝/bashCP_right.gif" alt></p>
+<h4 id="五、易错点"><a href="#五、易错点" class="headerlink" title="五、易错点"></a>五、易错点</h4><p><img src="/2019/05/10/Shell脚本：批量拷贝/bashCP_error.gif" alt></p>
+<p>说明：<code>[[ ]]</code>是bash内建的，需要使用bash来执行，使用sh是执行不了的。</p>
+
+          
+        
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+      
+    
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="https://zdalone.github.io/2019/05/09/Shell脚本：批量解压/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1248,7 +1469,7 @@ hexo clean &amp;&amp; hexo g &amp;&amp; hexo s
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">44</span>
+                    <span class="site-state-item-count">45</span>
                     <span class="site-state-item-name">日志</span>
                   </a>
                 </div>
@@ -1410,7 +1631,9 @@ hexo clean &amp;&amp; hexo g &amp;&amp; hexo s
                     
                       
                     
-                    <span class="site-state-item-count">34</span>
+                      
+                    
+                    <span class="site-state-item-count">35</span>
                     <span class="site-state-item-name">标签</span>
                   </a>
                 </div>
