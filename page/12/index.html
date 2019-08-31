@@ -345,6 +345,638 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://zdalone.github.io/2019/05/29/没有网络如何在虚拟机上的centos安装lrzsz/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Bigdan">
+      <meta itemprop="description" content="理想三旬">
+      <meta itemprop="image" content="/images/lufei.jpeg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Bigdan的博客">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                
+                <a href="/2019/05/29/没有网络如何在虚拟机上的centos安装lrzsz/" class="post-title-link" itemprop="url">没有网络如何在虚拟机上的CentOS安装lrzsz</a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+
+              
+                
+              
+
+              <time title="创建时间：2019-05-29 09:55:00 / 修改时间：10:01:57" itemprop="dateCreated datePublished" datetime="2019-05-29T09:55:00+08:00">2019-05-29</time>
+            
+
+            
+              
+
+              
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/系统/" itemprop="url" rel="index"><span itemprop="name">系统</span></a></span>
+
+                
+                
+                  ，
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/系统/CentOS/" itemprop="url" rel="index"><span itemprop="name">CentOS</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+            
+          
+
+          
+          
+
+          
+
+          
+            <div class="post-symbolscount">
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">本文字数：</span>
+                
+                <span title="本文字数">1.8k</span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">2 分钟</span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h2 id="思路：从iso文件中获取安装软件"><a href="#思路：从iso文件中获取安装软件" class="headerlink" title="思路：从iso文件中获取安装软件"></a>思路：从iso文件中获取安装软件</h2><h2 id="步骤："><a href="#步骤：" class="headerlink" title="步骤："></a>步骤：</h2><h3 id="1-查看光驱设备"><a href="#1-查看光驱设备" class="headerlink" title="1.查看光驱设备"></a>1.查看光驱设备</h3><p><img src="/2019/05/29/没有网络如何在虚拟机上的centos安装lrzsz/sr0.png" alt="sr0"></p>
+<h3 id="2-挂载iso文件"><a href="#2-挂载iso文件" class="headerlink" title="2.挂载iso文件"></a>2.挂载iso文件</h3><p><img src="/2019/05/29/没有网络如何在虚拟机上的centos安装lrzsz/mount.png" alt="mount"></p>
+<h3 id="3-编辑CentOS-Media-repo文件"><a href="#3-编辑CentOS-Media-repo文件" class="headerlink" title="3.编辑CentOS-Media.repo文件"></a>3.编辑CentOS-Media.repo文件</h3><p><img src="/2019/05/29/没有网络如何在虚拟机上的centos安装lrzsz/media.png" alt="media"><br><img src="/2019/05/29/没有网络如何在虚拟机上的centos安装lrzsz/file.png" alt="file"><br>（注意：CentOS-Base.repo是yum网络源的配置文件，CentOS-Media.repo是yum本地源的配置文件，此时需要将CentOS-Base.repo改名为CentOS-Base.repo.bak，不然默认会读该文&gt;件）</p>
+<h3 id="4-清空yum缓存"><a href="#4-清空yum缓存" class="headerlink" title="4.清空yum缓存"></a>4.清空yum缓存</h3><p><img src="/2019/05/29/没有网络如何在虚拟机上的centos安装lrzsz/clean.png" alt="clean"></p>
+<h3 id="5-查看lrzsz软件包名"><a href="#5-查看lrzsz软件包名" class="headerlink" title="5.查看lrzsz软件包名"></a>5.查看lrzsz软件包名</h3><p><img src="/2019/05/29/没有网络如何在虚拟机上的centos安装lrzsz/check.png" alt="check"></p>
+<h3 id="6-安装"><a href="#6-安装" class="headerlink" title="6.安装"></a>6.安装</h3><p><img src="/2019/05/29/没有网络如何在虚拟机上的centos安装lrzsz/install.png" alt="install"></p>
+
+          
+        
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+      
+    
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://zdalone.github.io/2019/05/28/批量解压/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Bigdan">
+      <meta itemprop="description" content="理想三旬">
+      <meta itemprop="image" content="/images/lufei.jpeg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Bigdan的博客">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                
+                <a href="/2019/05/28/批量解压/" class="post-title-link" itemprop="url">批量解压</a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+
+              
+                
+              
+
+              <time title="创建时间：2019-05-28 13:35:43" itemprop="dateCreated datePublished" datetime="2019-05-28T13:35:43+08:00">2019-05-28</time>
+            
+
+            
+              
+
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">更新于</span>
+                
+                <time title="修改时间：2019-05-31 17:55:38" itemprop="dateModified" datetime="2019-05-31T17:55:38+08:00">2019-05-31</time>
+              
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/系统/" itemprop="url" rel="index"><span itemprop="name">系统</span></a></span>
+
+                
+                
+                  ，
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/系统/Linux/" itemprop="url" rel="index"><span itemprop="name">Linux</span></a></span>
+
+                
+                
+                  ，
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/系统/Linux/命令/" itemprop="url" rel="index"><span itemprop="name">命令</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+            
+          
+
+          
+          
+
+          
+
+          
+            <div class="post-symbolscount">
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">本文字数：</span>
+                
+                <span title="本文字数">890</span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">1 分钟</span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h2 id="昨天有个需求：将一个目录下的所有tar-gz文件解压。"><a href="#昨天有个需求：将一个目录下的所有tar-gz文件解压。" class="headerlink" title="昨天有个需求：将一个目录下的所有tar.gz文件解压。"></a>昨天有个需求：将一个目录下的所有tar.gz文件解压。</h2><p>方法一：</p>
+<p><code>for tar in *.tar.gz;do tar xzvf $tar;done</code></p>
+<p><img src="/2019/05/28/批量解压/1.png" alt="image"></p>
+<p>方法二：</p>
+<p><code>ls *.tar.gz | xargs -n1 tar xzvf</code></p>
+<p><img src="/2019/05/28/批量解压/2.png" alt="image"></p>
+<h3 id="解压到指定目录"><a href="#解压到指定目录" class="headerlink" title="解压到指定目录"></a>解压到指定目录</h3><p><code>ls *.tar.gz | xargs -n1 tar -C tmp  -xzvf</code></p>
+<p><img src="/2019/05/28/批量解压/3.png" alt="image"></p>
+
+          
+        
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+      
+    
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://zdalone.github.io/2019/05/24/Python转义反斜杠说明/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Bigdan">
+      <meta itemprop="description" content="理想三旬">
+      <meta itemprop="image" content="/images/lufei.jpeg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Bigdan的博客">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                
+                <a href="/2019/05/24/Python转义反斜杠说明/" class="post-title-link" itemprop="url">Python转义反斜杠说明</a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+
+              
+                
+              
+
+              <time title="创建时间：2019-05-24 08:22:29 / 修改时间：08:35:00" itemprop="dateCreated datePublished" datetime="2019-05-24T08:22:29+08:00">2019-05-24</time>
+            
+
+            
+              
+
+              
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/语言/" itemprop="url" rel="index"><span itemprop="name">语言</span></a></span>
+
+                
+                
+                  ，
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/语言/Python/" itemprop="url" rel="index"><span itemprop="name">Python</span></a></span>
+
+                
+                
+                  ，
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/语言/Python/语法/" itemprop="url" rel="index"><span itemprop="name">语法</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+            
+          
+
+          
+          
+
+          
+
+          
+            <div class="post-symbolscount">
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">本文字数：</span>
+                
+                <span title="本文字数">2k</span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">2 分钟</span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h2 id="A、打开一个文件（转义反斜杠）"><a href="#A、打开一个文件（转义反斜杠）" class="headerlink" title="A、打开一个文件（转义反斜杠）"></a>A、打开一个文件（转义反斜杠）</h2><p><code>f = open(&quot;D:\\wxtel_log.csv&quot;)</code><br><img src="/2019/05/24/Python转义反斜杠说明/1.png" alt="image"></p>
+<h2 id="B、打开一个文件（使用正斜杠）"><a href="#B、打开一个文件（使用正斜杠）" class="headerlink" title="B、打开一个文件（使用正斜杠）"></a>B、打开一个文件（使用正斜杠）</h2><p><code>f = open(&quot;D:/wxtel_log.csv&quot;)</code><br><img src="/2019/05/24/Python转义反斜杠说明/2.png" alt="image"></p>
+<h2 id="C、打开一个文件（使用反斜杠，但不转义）"><a href="#C、打开一个文件（使用反斜杠，但不转义）" class="headerlink" title="C、打开一个文件（使用反斜杠，但不转义）"></a>C、打开一个文件（使用反斜杠，但不转义）</h2><p><img src="/2019/05/24/Python转义反斜杠说明/3.png" alt="image"></p>
+<h4 id="似乎也没有毛病啊！？"><a href="#似乎也没有毛病啊！？" class="headerlink" title="似乎也没有毛病啊！？"></a>似乎也没有毛病啊！？</h4><h4 id="但是，我们换一个文件试试看！"><a href="#但是，我们换一个文件试试看！" class="headerlink" title="但是，我们换一个文件试试看！"></a>但是，我们换一个文件试试看！</h4><p><img src="/2019/05/24/Python转义反斜杠说明/4.png" alt="image"></p>
+<h4 id="怎么出错了？"><a href="#怎么出错了？" class="headerlink" title="怎么出错了？"></a>怎么出错了？</h4><h3 id="使用A和B的方式打开这个文件"><a href="#使用A和B的方式打开这个文件" class="headerlink" title="使用A和B的方式打开这个文件"></a>使用A和B的方式打开这个文件</h3><p><img src="/2019/05/24/Python转义反斜杠说明/5.png" alt="image"></p>
+<h4 id="没毛病！"><a href="#没毛病！" class="headerlink" title="没毛病！"></a>没毛病！</h4><p><code>注：一般转义反斜杠是为了避免反斜杠后面有t、r或n等字符组成特殊字符，所以转义反斜杠后反斜杠就只有表示‘\’这唯一的功能了！</code></p>
+<h3 id="当然一定要使用不转义的反斜杠也不是不可以"><a href="#当然一定要使用不转义的反斜杠也不是不可以" class="headerlink" title="当然一定要使用不转义的反斜杠也不是不可以"></a>当然一定要使用不转义的反斜杠也不是不可以</h3><p><img src="/2019/05/24/Python转义反斜杠说明/6.png" alt="image"></p>
+<h4 id="使用原始字符串操作符—R-r即可"><a href="#使用原始字符串操作符—R-r即可" class="headerlink" title="使用原始字符串操作符—R/r即可"></a>使用原始字符串操作符—R/r即可</h4>
+          
+        
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+      
+    
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="https://zdalone.github.io/2019/05/22/安装xlrd/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1851,667 +2483,6 @@
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://zdalone.github.io/2019/05/14/软技能-代码之外的生存指南/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Bigdan">
-      <meta itemprop="description" content="理想三旬">
-      <meta itemprop="image" content="/images/lufei.jpeg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Bigdan的博客">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                
-                <a href="/2019/05/14/软技能-代码之外的生存指南/" class="post-title-link" itemprop="url">软技能-代码之外的生存指南</a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-
-            
-            
-            
-
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-
-              
-                
-              
-
-              <time title="创建时间：2019-05-14 15:31:31" itemprop="dateCreated datePublished" datetime="2019-05-14T15:31:31+08:00">2019-05-14</time>
-            
-
-            
-              
-
-              
-                
-                <span class="post-meta-divider">|</span>
-                
-
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">更新于</span>
-                
-                <time title="修改时间：2019-05-24 08:27:53" itemprop="dateModified" datetime="2019-05-24T08:27:53+08:00">2019-05-24</time>
-              
-            
-          </span>
-
-          
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/读书/" itemprop="url" rel="index"><span itemprop="name">读书</span></a></span>
-
-                
-                
-                  ，
-                
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/读书/其他/" itemprop="url" rel="index"><span itemprop="name">其他</span></a></span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-            
-          
-
-          
-          
-
-          
-
-          
-            <div class="post-symbolscount">
-              
-
-              
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-file-word-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">本文字数：</span>
-                
-                <span title="本文字数">704</span>
-              
-
-              
-                <span class="post-meta-divider">|</span>
-              
-
-              
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-clock-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
-                
-                <span title="阅读时长">1 分钟</span>
-              
-            </div>
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h4 id="一、说明"><a href="#一、说明" class="headerlink" title="一、说明"></a>一、说明</h4><p>这是我在公司内部做的一次读书分享，在这里记录一下。</p>
-<h4 id="二、封面"><a href="#二、封面" class="headerlink" title="二、封面"></a>二、封面</h4><p><img src="/2019/05/14/软技能-代码之外的生存指南/封面.jpg" alt></p>
-<h4 id="三、下载"><a href="#三、下载" class="headerlink" title="三、下载"></a>三、下载</h4><p><a href="https://pan.baidu.com/s/1aSNXSpA54aks_5FTHQceQQ" target="_blank" rel="noopener">点击下载</a><br>提取码：n4vp</p>
-
-          
-        
-      
-    </div>
-
-    
-
-    
-    
-    
-
-    
-
-    
-      
-    
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://zdalone.github.io/2019/05/13/卡通头像生成工具/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Bigdan">
-      <meta itemprop="description" content="理想三旬">
-      <meta itemprop="image" content="/images/lufei.jpeg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Bigdan的博客">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                
-                <a href="/2019/05/13/卡通头像生成工具/" class="post-title-link" itemprop="url">卡通头像生成工具</a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-
-            
-            
-            
-
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-
-              
-                
-              
-
-              <time title="创建时间：2019-05-13 14:30:00" itemprop="dateCreated datePublished" datetime="2019-05-13T14:30:00+08:00">2019-05-13</time>
-            
-
-            
-              
-
-              
-                
-                <span class="post-meta-divider">|</span>
-                
-
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">更新于</span>
-                
-                <time title="修改时间：2019-05-24 08:26:33" itemprop="dateModified" datetime="2019-05-24T08:26:33+08:00">2019-05-24</time>
-              
-            
-          </span>
-
-          
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/工具/" itemprop="url" rel="index"><span itemprop="name">工具</span></a></span>
-
-                
-                
-                  ，
-                
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/工具/实用工具/" itemprop="url" rel="index"><span itemprop="name">实用工具</span></a></span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-            
-          
-
-          
-          
-
-          
-
-          
-            <div class="post-symbolscount">
-              
-
-              
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-file-word-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">本文字数：</span>
-                
-                <span title="本文字数">1k</span>
-              
-
-              
-                <span class="post-meta-divider">|</span>
-              
-
-              
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-clock-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
-                
-                <span title="阅读时长">1 分钟</span>
-              
-            </div>
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h4 id="一、网址"><a href="#一、网址" class="headerlink" title="一、网址"></a>一、网址</h4><p><a href="https://getavataaars.com" target="_blank" rel="noopener">https://getavataaars.com</a></p>
-<h4 id="二、演示"><a href="#二、演示" class="headerlink" title="二、演示"></a>二、演示</h4><p><img src="/2019/05/13/卡通头像生成工具/avataaars.gif" alt></p>
-<h4 id="三、简要说明"><a href="#三、简要说明" class="headerlink" title="三、简要说明"></a>三、简要说明</h4><p><img src="/2019/05/13/卡通头像生成工具/getavataaars.com.png" alt></p>
-<pre><code>① Top：发型
-
-② Accessories：眼镜
-
-③ Hair Color：发色
-
-④ Facial Hair：胡须
-
-⑤ Facial Hair Color：胡须颜色
-
-⑥ Clothes：衣服款式
-
-⑦ Eyes：眼睛
-
-⑧ Eyebrow：眉毛
-
-⑨ Mouth：嘴型
-
-⑩ Skin：肤色
-</code></pre><h4 id="四、补充"><a href="#四、补充" class="headerlink" title="四、补充"></a>四、补充</h4><p>头像制作完毕后，网址提供多种格式的下载方式（png、svg），参考演示。</p>
-
-          
-        
-      
-    </div>
-
-    
-
-    
-    
-    
-
-    
-
-    
-      
-    
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://zdalone.github.io/2019/05/10/Shell脚本：批量拷贝/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Bigdan">
-      <meta itemprop="description" content="理想三旬">
-      <meta itemprop="image" content="/images/lufei.jpeg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Bigdan的博客">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                
-                <a href="/2019/05/10/Shell脚本：批量拷贝/" class="post-title-link" itemprop="url">Shell脚本：批量拷贝</a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-
-            
-            
-            
-
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-
-              
-                
-              
-
-              <time title="创建时间：2019-05-10 16:25:20" itemprop="dateCreated datePublished" datetime="2019-05-10T16:25:20+08:00">2019-05-10</time>
-            
-
-            
-              
-
-              
-                
-                <span class="post-meta-divider">|</span>
-                
-
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">更新于</span>
-                
-                <time title="修改时间：2019-05-28 13:43:38" itemprop="dateModified" datetime="2019-05-28T13:43:38+08:00">2019-05-28</time>
-              
-            
-          </span>
-
-          
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/语言/" itemprop="url" rel="index"><span itemprop="name">语言</span></a></span>
-
-                
-                
-                  ，
-                
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/语言/脚本/" itemprop="url" rel="index"><span itemprop="name">脚本</span></a></span>
-
-                
-                
-                  ，
-                
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/语言/脚本/shell/" itemprop="url" rel="index"><span itemprop="name">shell</span></a></span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-            
-          
-
-          
-          
-
-          
-
-          
-            <div class="post-symbolscount">
-              
-
-              
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-file-word-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">本文字数：</span>
-                
-                <span title="本文字数">4.3k</span>
-              
-
-              
-                <span class="post-meta-divider">|</span>
-              
-
-              
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-clock-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
-                
-                <span title="阅读时长">4 分钟</span>
-              
-            </div>
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h4 id="一、需求"><a href="#一、需求" class="headerlink" title="一、需求"></a>一、需求</h4><p>将指定目录下的特定格式的文件拷贝到指定目录下</p>
-<h4 id="二、代码"><a href="#二、代码" class="headerlink" title="二、代码"></a>二、代码</h4><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span>! /bin/bash</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span>需要传入两个参数</span><br><span class="line">if [ $# -ne 3 ]; then</span><br><span class="line">echo "USAGE: sh $0 srcPath targetPath fileReg"</span><br><span class="line">echo "eg: sh $0 /mnt/bigdan1 / '*.txt'"</span><br><span class="line">exit 1</span><br><span class="line">fi</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span>获取两个参数</span><br><span class="line">srcPath=$1</span><br><span class="line">targetPath=$2</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span>判断传入的两个参数是否存在</span><br><span class="line">if [ ! -d "$srcPath" ]; then</span><br><span class="line">echo "$srcPath does not exist"</span><br><span class="line">exit 1</span><br><span class="line">fi</span><br><span class="line"></span><br><span class="line">if [ ! -d "$targetPath" ]; then</span><br><span class="line">echo "$targetPath does not exist"i</span><br><span class="line">exit 1</span><br><span class="line">fi</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span>第三个参数为正则表达式</span><br><span class="line">REG=$3</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span>获取srcPath下的所有文件</span><br><span class="line">for dir in $(ls $srcPath)</span><br><span class="line">do</span><br><span class="line">        if [[ $dir =~ $REG ]]; then #过滤出符合正则规则的文件</span><br><span class="line">		path=$srcPath$dir #拼凑文件路径</span><br><span class="line">		echo "begin copy $dir from  $srcPath to $targetPath...`date`"</span><br><span class="line">                cp -r $path $targetPath</span><br><span class="line">		echo "finish copy $dir from $srcPath to $targetPath! `date`"</span><br><span class="line">        fi</span><br><span class="line">done</span><br><span class="line"></span><br><span class="line">exit 0</span><br></pre></td></tr></table></figure>
-<h4 id="三、知识点"><a href="#三、知识点" class="headerlink" title="三、知识点"></a>三、知识点</h4><p>① shell中正则匹配需要在<code>[[ ]]</code>内进行；</p>
-<p>② shell中使用 <code>=～</code> 完成正则匹配。</p>
-<h4 id="四、演示"><a href="#四、演示" class="headerlink" title="四、演示"></a>四、演示</h4><p><img src="/2019/05/10/Shell脚本：批量拷贝/bashCP_right.gif" alt></p>
-<h4 id="五、易错点"><a href="#五、易错点" class="headerlink" title="五、易错点"></a>五、易错点</h4><p><img src="/2019/05/10/Shell脚本：批量拷贝/bashCP_error.gif" alt></p>
-<p>说明：<code>[[ ]]</code>是bash内建的，需要使用bash来执行，使用sh是执行不了的。</p>
-
-          
-        
-      
-    </div>
-
-    
-
-    
-    
-    
-
-    
-
-    
-      
-    
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
   </section>
 
   
@@ -2560,7 +2531,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">124</span>
+                    <span class="site-state-item-count">127</span>
                     <span class="site-state-item-name">日志</span>
                   </a>
                 </div>
@@ -2641,7 +2612,9 @@
                     
                       
                     
-                    <span class="site-state-item-count">32</span>
+                      
+                    
+                    <span class="site-state-item-count">33</span>
                     <span class="site-state-item-name">分类</span>
                   </a>
                 </div>
@@ -2760,7 +2733,9 @@
                     
                       
                     
-                    <span class="site-state-item-count">51</span>
+                      
+                    
+                    <span class="site-state-item-count">52</span>
                     <span class="site-state-item-name">标签</span>
                   </a>
                 </div>
@@ -2814,7 +2789,7 @@
       <i class="fa fa-area-chart"></i>
     </span>
     
-    <span title="站点总字数">106k</span>
+    <span title="站点总字数">108k</span>
   
 
   
@@ -2823,7 +2798,7 @@
       <i class="fa fa-coffee"></i>
     </span>
     
-    <span title="站点阅读时长">1:37</span>
+    <span title="站点阅读时长">1:38</span>
   
 </div>
 
