@@ -1,0 +1,1221 @@
+<!DOCTYPE html>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+<html class="theme-next gemini use-motion" lang="zh-CN">
+<head><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2">
+
+<link rel="stylesheet" href="/css/main.css?v=7.1.0">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=7.1.0">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=7.1.0">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=7.1.0">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=7.1.0" color="#222">
+
+
+
+
+
+
+
+<script id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Gemini',
+    version: '7.1.0',
+    sidebar: {"position":"left","display":"post","offset":12,"onmobile":false,"dimmer":false},
+    back2top: true,
+    back2top_sidebar: false,
+    fancybox: false,
+    fastclick: false,
+    lazyload: false,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+  
+
+
+
+
+  <meta name="description" content="项目的独特性导致项目充满风险,项目风险是一种不确定的事件或条件,可能发生、将要发生,也可能不发生。已发生的消极风险可视为问题,问题又会引发风险。   风险管理有 7 个过程:规划过程组：    11.1、规划风险管理:制定风险管理计划,指导如何实施、开展项目的风险管理活动; 11.2、识别风险:识别项目中的风险事件;   11.3、实施定性风险分析:为全部已识别的风险排列优先顺序;   11.4、">
+<meta name="keywords" content="PMP,PMP知识点">
+<meta property="og:type" content="article">
+<meta property="og:title" content="PMP:风险管理">
+<meta property="og:url" content="https://zdalone.github.io/2019/09/01/PMP-风险管理/index.html">
+<meta property="og:site_name" content="Bigdan的博客">
+<meta property="og:description" content="项目的独特性导致项目充满风险,项目风险是一种不确定的事件或条件,可能发生、将要发生,也可能不发生。已发生的消极风险可视为问题,问题又会引发风险。   风险管理有 7 个过程:规划过程组：    11.1、规划风险管理:制定风险管理计划,指导如何实施、开展项目的风险管理活动; 11.2、识别风险:识别项目中的风险事件;   11.3、实施定性风险分析:为全部已识别的风险排列优先顺序;   11.4、">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:image" content="https://zdalone.github.io/2019/09/01/PMP-风险管理/1.png">
+<meta property="og:image" content="https://zdalone.github.io/2019/09/01/PMP-风险管理/2.png">
+<meta property="og:image" content="https://zdalone.github.io/2019/09/01/PMP-风险管理/3.png">
+<meta property="og:image" content="https://zdalone.github.io/2019/09/01/PMP-风险管理/4.png">
+<meta property="og:image" content="https://zdalone.github.io/2019/09/01/PMP-风险管理/5.png">
+<meta property="og:image" content="https://zdalone.github.io/2019/09/01/PMP-风险管理/6.png">
+<meta property="og:image" content="https://zdalone.github.io/2019/09/01/PMP-风险管理/7.png">
+<meta property="og:image" content="https://zdalone.github.io/2019/09/01/PMP-风险管理/8.png">
+<meta property="og:image" content="https://zdalone.github.io/2019/09/01/PMP-风险管理/9.png">
+<meta property="og:image" content="https://zdalone.github.io/2019/09/01/PMP-风险管理/10.png">
+<meta property="og:image" content="https://zdalone.github.io/2019/09/01/PMP-风险管理/11.png">
+<meta property="og:image" content="https://zdalone.github.io/2019/09/01/PMP-风险管理/12.png">
+<meta property="og:image" content="https://zdalone.github.io/2019/09/01/PMP-风险管理/13.png">
+<meta property="og:image" content="https://zdalone.github.io/2019/09/01/PMP-风险管理/14.png">
+<meta property="og:image" content="https://zdalone.github.io/2019/09/01/PMP-风险管理/15.png">
+<meta property="og:updated_time" content="2019-09-01T12:17:22.800Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="PMP:风险管理">
+<meta name="twitter:description" content="项目的独特性导致项目充满风险,项目风险是一种不确定的事件或条件,可能发生、将要发生,也可能不发生。已发生的消极风险可视为问题,问题又会引发风险。   风险管理有 7 个过程:规划过程组：    11.1、规划风险管理:制定风险管理计划,指导如何实施、开展项目的风险管理活动; 11.2、识别风险:识别项目中的风险事件;   11.3、实施定性风险分析:为全部已识别的风险排列优先顺序;   11.4、">
+<meta name="twitter:image" content="https://zdalone.github.io/2019/09/01/PMP-风险管理/1.png">
+
+
+
+
+
+  
+  
+  <link rel="canonical" href="https://zdalone.github.io/2019/09/01/PMP-风险管理/">
+
+
+
+<script id="page.configurations">
+  CONFIG.page = {
+    sidebar: "",
+  };
+</script>
+
+  <title>PMP:风险管理 | Bigdan的博客</title>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .motion-element,
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-title { opacity: initial; }
+
+  .use-motion .logo,
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-CN">
+
+<link rel="stylesheet" href="/dist/APlayer.min.css">
+<div id="aplayer"></div>
+<script type="text/javascript" src="/dist/APlayer.min.js"></script>
+<script type="text/javascript" src="/dist/music.js"></script>
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta custom-logo">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Bigdan的博客</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+    
+    
+  </div>
+
+  <div class="site-nav-toggle">
+    <button aria-label="切换导航栏">
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  
+    <ul id="menu" class="menu">
+      
+        
+        
+        
+          
+          <li class="menu-item menu-item-home">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/" rel="section"><i class="menu-item-icon fa fa-fw fa-home //首页"></i> <br>首页</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-about">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/about/" rel="section"><i class="menu-item-icon fa fa-fw fa-user //关于"></i> <br>关于</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-tags">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags //标签"></i> <br>标签</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-categories">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/categories/" rel="section"><i class="menu-item-icon fa fa-fw fa-th //分类"></i> <br>分类</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-archives">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive //归档"></i> <br>归档</a>
+
+  </li>
+
+      
+      
+    </ul>
+  
+
+  
+
+  
+</nav>
+
+
+
+  
+
+
+
+</div>
+    </header>
+
+    
+
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+            
+
+          
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://zdalone.github.io/2019/09/01/PMP-风险管理/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Bigdan">
+      <meta itemprop="description" content="理想三旬">
+      <meta itemprop="image" content="/images/lufei.jpeg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Bigdan的博客">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">PMP:风险管理
+
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+
+              
+                
+              
+
+              <time title="创建时间：2019-09-01 18:20:41 / 修改时间：20:17:22" itemprop="dateCreated datePublished" datetime="2019-09-01T18:20:41+08:00">2019-09-01</time>
+            
+
+            
+              
+
+              
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/PMP/" itemprop="url" rel="index"><span itemprop="name">PMP</span></a></span>
+
+                
+                
+                  ，
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/PMP/知识点/" itemprop="url" rel="index"><span itemprop="name">知识点</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+            
+          
+
+          
+          
+
+          
+
+          
+            <div class="post-symbolscount">
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">本文字数：</span>
+                
+                <span title="本文字数">14k</span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">13 分钟</span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>项目的独特性导致项目充满风险,项目风险是一种<strong>不确定的事件或条件</strong>,可能发生、将要发生,也可能不发生。<br><strong>已发生的消极风险</strong>可视为<strong>问题</strong>,问题又会引发风险。  </p>
+<p>风险管理有 7 个过程:<br><strong>规划过程组</strong>：  </p>
+<ul>
+<li>11.1、规划风险管理:制定风险管理计划,指导如何实施、开展项目的风险管理活动;</li>
+<li>11.2、识别风险:识别项目中的风险事件;  </li>
+<li>11.3、实施定性风险分析:为全部已识别的风险排列优先顺序;  </li>
+<li>11.4、实施定量风险分析:针对高风险,量化概率和影响;  </li>
+<li>11.5、规划风险应对:制定可选方案或行动,提高对项目目标产生的机会、降低威胁。  </li>
+</ul>
+<p><strong>执行过程组</strong>：  </p>
+<ul>
+<li>11.6、实施风险应对:执行商定的风险应对计划的过程。  </li>
+</ul>
+<p><strong>监督过程组</strong>：  </p>
+<ul>
+<li>11.7、监督风险:跟踪已识别风险、监视残余风险、识别新风险,以及评估风险过程有效性。  </li>
+</ul>
+<h4 id="11-1-规划风险管理："><a href="#11-1-规划风险管理：" class="headerlink" title="11.1 规划风险管理："></a>11.1 规划风险管理：</h4><p>1、定义：如何实施、开展项目的风险管理活动的过程。  </p>
+<p><img src="/2019/09/01/PMP-风险管理/1.png" alt></p>
+<p>2、规划风险管理的输出：<strong>风险管理计划</strong>  </p>
+<p>描述如何安排和实施风险管理活动。包括了：<br><img src="/2019/09/01/PMP-风险管理/2.png" alt>  </p>
+<p>1）风险管理策略：<strong>管理本项目风险的一般方法</strong>。<br>2）方法论（如何管理项目的风险）<br>3）角色和职责（<strong>谁负责识别风险、谁负责规划风险应对</strong>）<br>4）资金（<strong>计划花多少钱在风险管理上面</strong>）<br>5）时间安排（<strong>什么时候识别风险、什么时候规划风险应对、什么时候监督风险，建立进度应急储备的使用方案</strong>）。<br>6）风险类别：<font color="red"><strong>RBS</strong></font>。这是根据以往的经验、历史信息总结的常见的风险的类别。这是个结构化的工具，帮助识别风险。<br>7）<strong>干系人的风险偏好：他们的风险偏好会影响规划风险管理过程的细节</strong>。<br>8）风险概率和影响的定义：<strong>定性风险分析，需要有个标准，到什么程度是重要的、什么程度是次要的</strong>。<br>9）<strong>概率和影响矩阵：根据概率和影响，把风险划分为高、中、低级别</strong>。<br>10）报告格式：风险登记册的内容和格式。<br>11）跟踪：规定如何记录风险活动、<strong>如何进行风险审计</strong>。</p>
+<h4 id="11-2-识别风险："><a href="#11-2-识别风险：" class="headerlink" title="11.2 识别风险："></a>11.2 识别风险：</h4><p>1、定义：识别单个项目风险以及整体风险的来源，并<strong>记录其特征</strong>的过程。识别风险过程<font color="red"><strong>贯穿整个项目生命周期</strong></font>。</p>
+<p><img src="/2019/09/01/PMP-风险管理/3.png" alt></p>
+<p>2、识别风险的工具：<font color="red">核对单</font><br>根据以往项目的<strong>历史信息</strong>进行审查，编制风险识别核对单。<br>这个方法<strong>比较快，但是不全面</strong>，需要关心这个项目独特的地方，和以往项目不同的风险。<br>在项目<strong>收尾时</strong>，应该<strong>对核对单进行审查</strong>，根据新的经验教训改进核对单，<strong>供未来项目</strong>使用。</p>
+<p>3、识别风险的工具：<font color="red">假设条件与制约因素分析</font><br>开展假设条件和制约因素的分析，来探索它们的<strong>有效性</strong>，确定其中哪些会引发项目风险。<br>假设就意味着风险，要<strong>定期分析假设</strong>，看假设还能否成立。某个制约因素并非不可取消，也许就可以取消它，并相应获得一个<strong>机会</strong>。</p>
+<p>4、识别风险的工具：<font color="red">SWOT 分析</font><br>它是一种职业规划的工具，也叫<strong>优劣势分析、环境分析法</strong>。<br><img src="/2019/09/01/PMP-风险管理/4.png" alt></p>
+<p>SO 战略：<font color="red">利用</font><br>WO 战略：<font color="red">改进</font><br>ST 战略：<font color="red">监视</font><br>WT 战略：<font color="red">消除</font>  </p>
+<p>5、识别风险的输出：<font color="red">风险登记册</font><br>已识别的风险清单（单个风险）、潜在的应对措施、潜在风险责任人。  </p>
+<p>6、识别风险的输出：<font color="red">风险报告</font><br>风险报告是关于<strong>整体项目风险</strong>的信息，以及关于已识别的<strong>单个项目风险</strong>的概述信息。<br>内容包括：  </p>
+<ul>
+<li>整体项目风险的来源  </li>
+<li>关于已识别单个项目风险的概述信息  </li>
+</ul>
+<p>风险登记册，<strong>团队内部使用</strong>，一般用来记录单个风险。<br>风险报告，<strong>团队外部用</strong>，用来记录整体项目风险或单个风险特别值得关注的地方。</p>
+<h4 id="11-3-实施定性风险分析："><a href="#11-3-实施定性风险分析：" class="headerlink" title="11.3 实施定性风险分析："></a>11.3 实施定性风险分析：</h4><p>1、定义：是根据风险发生的概率、风险发生后对项目的影响，来<strong>评估风险的优先级和重要性</strong>。  </p>
+<p><img src="/2019/09/01/PMP-风险管理/5.png" alt></p>
+<p>2、实施定性风险分析的工具：<font color="red">风险数据质量评估</font><br>考察计算风险各种可能和影响所依赖的数据的质量如何，<strong>是否可信、可靠完整</strong>。  </p>
+<p>3、实施定性风险分析的工具：<font color="red">风险概率和影响评估</font><br>调查每个具体风险发生的<strong>可能性</strong>和对项目目标的<strong>潜在影响</strong>。</p>
+<p><img src="/2019/09/01/PMP-风险管理/6.png" alt></p>
+<p>4、实施定性风险分析的工具：<font color="red"><strong>概率和影响矩阵</strong></font><br>也叫做<strong>风险级别矩阵</strong>。根据<strong>概率和影响</strong>，对<strong>风险重要性</strong>进行排序。<br><img src="/2019/09/01/PMP-风险管理/7.png" alt></p>
+<p>每个风险值＝概率X影响，计算出分值后给它对应进矩阵<br>分数最高的 b 是<strong>高风险</strong>，接下来需要<strong>再做定量分析</strong>的；<br>ac 是中等风险，可以<strong>直接进入规划风险应对过程</strong>；<br>d 是低风险，放入<strong>待观察清单</strong>  </p>
+<p>5、实施定性风险分析的工具：<font color="rd">风险分类</font><br>根据风险的来源、受影响的领域、<strong>共同的根本原因</strong>进行分类，以便于制定应对措施。所以风险分类的<strong>目的是为了方便制定应对措施</strong>。 </p>
+<p>6、实施定性风险分析的输出：<font color="red">风险登记册更新</font><br>1） 对每个风险的概率和影响评估<br>2） 优先级或风险分值<br>3） 指定风险责任人<br>4） 风险紧迫性信息或风险类别<br>5） 观察清单 Watch List（低优先级风险）<br>6） 需要进一步分析的风险   </p>
+<p>7、实施定性风险分析的输出：<font color="red">风险报告</font><br>更新风险报告，记录<strong>最重要的单个项目风险</strong>，所有已识别风险的<strong>优先级列表</strong>，以及简单的结论。  </p>
+<h5 id="练习题："><a href="#练习题：" class="headerlink" title="练习题："></a>练习题：</h5><p>1、项目团队完成了<strong>识别风险</strong>过程。在这个阶段，下列哪一项信息应该包含进风险登记册中？<br>A. 风险优先级和可能的应对措施清单<br>B. 识别的风险和可能的应对措施清单<br>C．潜在的应对措施和风险分类清单<br>D．识别的风险根本原因和风险优先顺序</p>
+<p>答案 B。识别风险的输出，风险登记册：包含<strong>已识别的风险清单、潜在的应对措施</strong>。<br>风险优先级是定性风险分析的输出，排除 A。<br>风险分类清单是定性风险分析的输出，排除 C。<br>风险优先顺序是定性风险分析的输出，排除 D。  </p>
+<h4 id="11-4-实施定量风险分析："><a href="#11-4-实施定量风险分析：" class="headerlink" title="11.4 实施定量风险分析："></a>11.4 实施定量风险分析：</h4><p>做完定性之后，针对<strong>高风险</strong>需要做定量分析，比如刚才的 b 风险。所以，定量<strong>并不是每个风险都需要做的</strong>，他只针对高风险才需要做。<br>1、定义：就已识别的单个项目风险和不确定性的其他来源对项目整体目标的影响进行定量分析的过程。做两件事：<br> 1）对定性分析中认为<strong>严重</strong>的单个项目风险做定量分析；<br> 2）基于单个风险定量分析的结果，对项目<strong>整体目标</strong>的影响进行定量分析，量化风险信息，<strong>用损失多少钱、或耽误多少时间</strong>表示出来。  </p>
+<p><img src="/2019/09/01/PMP-风险管理/8.png" alt></p>
+<p>2、实施定量风险分析的工具：<strong>数据分析</strong><br>1）<strong>敏感性分析</strong>：有助于确定哪些风险对项目<strong>具有最大的潜在影响</strong>。<font color="red">每次改变一个因素，其他的因素不变，看这个因素对目标产生多大程度的影响</font>。<br>   这样就可以确定哪个因素的风险对项目具有最大的影响。敏感性分析的典型表现形式是<font color="red"><strong>龙卷风图</strong></font>。<br>   关键词就是<font color="red">“最大”“最具有影响”“影响最多”</font>，如果题目出现这些关键词，那么就一定要考虑是不是敏感性分析。</p>
+<p>2）<strong>预期货币价值分析</strong>：用<strong>货币</strong>来表示每个风险的<strong>概率和影响</strong>。<br><strong>机会的 EMV 表示为正值，威胁表示为负值</strong>。<br>EMV=概率X影响。再把所有乘积相加<br>最通常的用途是<strong>决策树分析</strong>，决策树的好处是<strong>考虑各种可能</strong>。</p>
+<p>3、实施定量风险分析的工具：<strong>模拟</strong><br><strong>蒙特卡洛，多次估算</strong>。  </p>
+<p>4、实施定量风险分析的输出：<strong>风险报告更新</strong><br> 1）对整体项目风险敞口的评估结果；<br> 2）项目详细概率分析的结果；<br> 3）单个项目风险优先级清单；<br> 4）定量风险分析结果的趋势；<br> 5）风险应对<strong>建议</strong>。</p>
+<h4 id="11-5-规划风险应对"><a href="#11-5-规划风险应对" class="headerlink" title="11.5 规划风险应对"></a>11.5 规划风险应对</h4><p>1、定义：为处理整体项目<strong>风险敞口</strong>，以及应对单个项目风险，而制定<strong>可选方案</strong>、选择<strong>应对策略</strong>并商定<strong>应对行动</strong>。<br><img src="/2019/09/01/PMP-风险管理/9.png" alt></p>
+<p>2、规划风险应对的工具：<font color="red">威胁应对策略</font><br><img src="/2019/09/01/PMP-风险管理/10.png" alt></p>
+<p>1）规避 Avoid：也翻译为<font color="red">回避</font>。采取行动来<strong>完全消除威胁</strong>，或保护项目<strong>免受风险影响</strong>。<br>通常包括：  </p>
+<ul>
+<li><strong>改变项目管理计划</strong>  </li>
+<li>缩小范围  </li>
+<li><strong>改变策略</strong>  </li>
+<li>延长进度<br>关闭整个项目，等等。以完全消除威胁。</li>
+</ul>
+<p>2）<strong>转移</strong> Transfer：把风险管理责任简单的<strong>推给另一方，而并非消除风险</strong>。<br>包括： </p>
+<ul>
+<li>外包</li>
+<li><strong>找供应商</strong>，等等。</li>
+</ul>
+<p>3）<strong>减轻</strong> Mitigate：采取行动<strong>降低风险发生概率或影响</strong>。<br>包括：</p>
+<ul>
+<li>采用<strong>不太复杂的流程</strong>  </li>
+<li>进行<strong>更多的测试</strong>  </li>
+<li><strong>多家供应商选更加可靠的</strong></li>
+<li>开发原型  </li>
+<li>加入冗余部件  </li>
+<li>备份  </li>
+<li>多准备几个，等等。  </li>
+</ul>
+<p>4）<strong>接受</strong> Accept：接受风险存在，而<strong>不采取任何措施（除非真的发生）的风险</strong>。<br>使用场景：没有其他合理的应对策略或其他策略不具经济有效性；<br>接受策略分两种：<br><strong>被动接受</strong>：等风险发生了再说，真的发生了再由项目团队进行处理（<strong>权变措施</strong>）；<br><strong>主动接受</strong>：建立应急储备，安排时间、资金或资源来应对。  </p>
+<p>5）<strong>上报</strong>：Escalate<br>如果项目团队或项目发起人认为某<strong>威胁不在项目范围内</strong>，或提议的应对措施<strong>超出了项目经理的权限</strong>，就应该采用上报策略。<br>被上报的风险将在项目以上更高的层面如项目集层面、项目组合层面或组织其他相关部门加以管理。  </p>
+<p>3、规划风险应对的工具：<font color="red">机会的应对策略</font><br><img src="/2019/09/01/PMP-风险管理/11.png" alt></p>
+<p>1）<strong>开拓</strong> Exploit：与“规避”相对应。消除某个积极风险的不确定性，<strong>确保机会肯定出现</strong>。<br>包括：  </p>
+<ul>
+<li>把组织中<strong>最有能力的资源</strong>分派给项目来<strong>缩短完工时间</strong>  </li>
+<li>采用<strong>全新技术或技术升级</strong>来减少实现项目目标所需的成本和工期</li>
+</ul>
+<p>2）<strong>分享</strong> Share：与“转移”相对应。把应对机会的<strong>部分或全部责任</strong>分配给<strong>最能为项目利益抓住机会的第三方</strong>（共享方）。<br>包括：  </p>
+<ul>
+<li>建立风险共担的合作关系和团队</li>
+<li>为特殊目的成立公司或<strong>联营体</strong>  </li>
+<li>目的是充分利用机会，使各方都从中受益</li>
+</ul>
+<p>3）<strong>提高</strong> Enhance：与“减轻”相对应。提高积极<strong>机会的发生概率或影响</strong>。<br>包括：  </p>
+<ul>
+<li>增加资源  </li>
+<li>提高概率  </li>
+<li>提高积极影响  </li>
+</ul>
+<p>4）<strong>接受</strong> Accept：当机会发生时乐以利用，但<strong>不主动追求</strong>。<br>包括：  </p>
+<ul>
+<li>主动接受：<strong>主动建立应急储备，预留时间、资金或资源</strong>以便在机会出现是加以利用；</li>
+<li>被动接受：不采取主动行动，定期审查，确保机会没有太大变化。</li>
+</ul>
+<p>5）<strong>上报</strong>：Escalate<br>如果项目团队或项目发起人认为某威胁不在项目范围内，或提议的应对措施超出了项目经理的权限，就应该采用上报策略。<br>被上报的风险将在项目以上更高的层面如项目集层面、项目组合层面或组织其他相关部门加以管理。  </p>
+<p>4、规划风险应对的工具：<font color="red">应急应对策略</font><br>应急应对策略是指只有在某些<strong>预定条件</strong>发生时才能实施的专门计划过的应对措施，又称<strong>应急计划或应急预案</strong>。  </p>
+<p>5、规划风险应对的工具：<font color="red">整体项目风险的应对策略</font><br>通常采用规避、开拓、转移或分享、减轻或提高、接受这五种策略来应对整体项目风险。<br><img src="/2019/09/01/PMP-风险管理/12.png" alt></p>
+<p>1）规避：通过取消或某些高威胁的工作来降低整体项目风险水平。如果整体项目风险太高且无法降低，就不得不提前终止整个项目。<br>2）开拓：扩大项目范围：确保抓住某种即将出现的巨大机会，以提高项目对干系人的价值。<br>3）转移或分享：如果负面的整体项目风险太高，就采取转移策略；如果正面的整体项目风险很大且<strong>靠自身力量难以实现</strong>，就采取分享策略。<br>4）减轻或提高：采取措施，降低整体项目风险的水平，提高整体项目目标出现正面影响的可能性（如提前完工）。<br>5）接受：按当前的状况继续实施项目，不采取任何主动的应对措施。</p>
+<p>6、规划风险应对的输出：<font color="red">风险登记册更新</font>。<br>应对策略、应对策略所需的预算、风险发生和启动应急计划的<strong>触发因素、弹回计划、残余风险、次生风险</strong>。  </p>
+<p>7、规划风险应对的输出：<font color="red">风险报告</font><br>记录针对当前整体项目风险敞口和高优先级风险的经商定的应对措施，以及实施这些措施之后的预期变化。</p>
+<h5 id="练习题：-1"><a href="#练习题：-1" class="headerlink" title="练习题："></a>练习题：</h5><p>1、在项目开始时，项目经理召开了一次由项目团队和关键客户干系人参加的风险主题会。专题会结束后，他们制作了一个由多个风险及其发生<strong>概率</strong>和对项目的<strong>影响</strong>组成的矩阵。在专题会上执行了什么类型的风险分析？<br>A.定量风险分析<br>B.定性风险分析<br>C.分类风险分析<br>D.德尔菲技术风险分析  </p>
+<p>答案B。概率和影响矩阵是实施定性风险分析的工具。  </p>
+<p>2、项目经理了解到主题专家（SME）<strong>正在考虑</strong>离开公司。该专家资源在其主题领域拥有深厚的知识，很难被替代。为确保主题专家能在整个项目期间留在项目中，项目经理与主题专家的经理讨论可能的措施。这些措施应该记录在哪个文件中？<br>A. 资源管理计划<br>B. 风险登记册<br>C. 风险管理计划<br>D. 组织分解结构  </p>
+<p>答案:B。潜在应对措施记录在风险登记册中。  </p>
+<p>3、以下哪种定量风险分析及模型方法有助于确定对项目<strong>影响最大</strong>的风险？<br>A. 敏感性分析<br>B. 净现值法<br>C. 决策树分析<br>D. 模型与模拟  </p>
+<p>答案:A。敏感性分析，确定哪个因素对项目<strong>影响最大</strong>。</p>
+<p>4、对于具有多个功能点的项目，哪种风险分析法可提供<strong>定量风险评估</strong>？<br>A. 风险概率和影响评估<br>B. 蒙特卡洛分析<br>C. 头脑风暴法<br>D. 风险登记册  </p>
+<p>答案 B。定量风险分析的工具，建模和模拟。 </p>
+<h4 id="11-6-实施风险应对"><a href="#11-6-实施风险应对" class="headerlink" title="11.6 实施风险应对"></a>11.6 实施风险应对</h4><p>1、定义：执行<strong>商定的风险应对计划</strong>，以<strong>提高机会、降低威胁</strong>。单个项目的应对策略和措施的<strong>实施情况</strong>，记入<strong>风险登记册</strong>；整体项目风险的应对策略和措施的实施情况，应该记入<strong>风险报告</strong>。   </p>
+<p><img src="/2019/09/01/PMP-风险管理/13.png" alt></p>
+<p>项目过程中的风险处理流程</p>
+<p><img src="/2019/09/01/PMP-风险管理/14.png" alt></p>
+<h4 id="11-7-监督风险："><a href="#11-7-监督风险：" class="headerlink" title="11.7 监督风险："></a>11.7 监督风险：</h4><p>1、定义：在整个项目期间，监督商定的风险应对计划的实施，跟踪<strong>已识别风险</strong>，识别和分析<strong>新风险</strong>，以及评估风险管理过程有效性的过程。 </p>
+<p>监督风险过程的其他<strong>目的</strong>在于确定：<br>1） 实施的风险应对是否有效；<br>2） 整体项目风险级别是否已改变；<br>3） 已识别单个项目风险的状态是否已改变；<br>4） <strong>是否出现新的单个项目风险</strong>；<br>5） 风险管理方法是否依然适用；<br>6） 项目假设条件是否依然成立；<br>7） 风险管理政策和程序是否已得到遵守；<br>8） 成本或进度应急储备是否需要修改；<br>9） 项目策略是否仍然有效。  </p>
+<p><img src="/2019/09/01/PMP-风险管理/15.png" alt></p>
+<p>2、监督风险的工具：<font color="red">审计</font><br>检查风险应对<strong>措施的有效性</strong>，以及<strong>风险管理过程</strong>的效果。  </p>
+<p>3、监督风险的工具：<font color="red">会议</font><br><strong>风险审查会</strong><br>定期安排风险审查，来检查和记录<strong>风险应对</strong>在处理整体项目风险和已识别单个项目风险方面的有效性；<br>风险审查可以识别新的单个项目风险（包括已商定应对措施所引发的<strong>次生风险</strong>），重新评估当前风险，<strong>关闭已过时风险</strong>，讨论风险发生所引发的问题，以及总结经验教训。</p>
+<p><strong>PMI理念：每次项目会议都应该讨论风险</strong>  </p>
+<p>4、监督风险的工具：<font color="red">储备分析</font><br>项目实施过程中，可能发生一些对<strong>预算或进度</strong>应急储备有<strong>积极或消极</strong>影响的风险。<br>储备分析是指在项目的<strong>任何时点比较剩余应急储备与剩余风险量，从而确定剩余储备是否仍然合理</strong>。  </p>
+<p>5、监督风险的输出：<font color="red">风险登记册更新</font>  </p>
+<p>添加新风险、更新已过时风险或已发生风险等。</p>
+<p>6、监督风险的输出：<font color="red">风险报告</font><br>反映重要单个项目风险的当前状态；以及整体项目风险的当前级别。 </p>
+<h5 id="练习题：-2"><a href="#练习题：-2" class="headerlink" title="练习题："></a>练习题：</h5><p>1、在项目施工阶段，供应商发生火灾，导致原材料的供应延迟了一周。项目经理已经识别到延迟的风险，并包含在计划当中。发生这个事件后，项目经理首先应该怎么做？<br>A.执行风险应对计划<br>B.由于材料延误，要求项目延期<br>C.更新项目基准<br>D.更新风险登记册  </p>
+<p>答案 A。<strong>已识别的风险发生，执行之前已规划好的应对措施即可</strong>。   </p>
+<p>2、项目团队面临积极和消极风险，下列哪种应对策略可以用来处理这二类风险？<br>A. 回避<br>B. 开拓<br>C. 接受<br>D. 减轻  </p>
+<p>答案C。<strong>接受即可用来应对积极风险，也可用来应对消极风险</strong>。  </p>
+<p><font color="red"><strong>3</strong></font>、在项目执行阶段，项目经理意识到其中一个新部件与一个现有产品之间存在不兼容的风险。项目经理为新部件的安装重定进度计划，以提供足够的时间来<strong>降低潜在的负面影响</strong>。项目经理用的是哪一种风险应对策略？<br>A. 减轻<br>B. 回避<br>C. 接受<br>D. 分摊  </p>
+<p>答案 A。PM 重定进度计划来“降低”潜在负面影响，说明是减轻。</p>
+<p>4、项目经理的风险应对策略要求向一个关键活动分配一名经验丰富的资源，<strong>缩短项目的时间线并提高利润</strong>。这使用的是什么风险应对策略？<br>A.开拓<br>B.接受<br>C.提高<br>D.分享  </p>
+<p>答案：A。确保缩短时间线和提高利润的事件一定发生，将概率提升至1。  </p>
+<p>5、在一个新产品版本项目中，客户要求实施一个新技术组件，而不是再次使用之前版本中开发的组件。项目经理识别到一些可能影响产品交付期限的潜在技术问题。项目经理应该怎么做？<br>A.使用新技术组件，因为这是客户要求<br>B.更新风险登记册，并登记该技术风险的应对措施<br>C.提出一个原型，评估潜在技术问题<br>D.通知变更请求的技术团队  </p>
+<p>答案：B。识别到风险，首先应该更新进风险登记册。  </p>
+<p><strong>6</strong>、随着项目进展，项目经理预测即将开展的活动中存在一些风险。项目经理应该使用哪一份文件来风险分类？<br>A.风险分解结构（rbs）<br>B.风险管理计划<br>C.风险登记册<br>D.风险报告</p>
+<p>答案：A。<strong>风险分解结构：按风险类别排列的一种层级结构</strong>。</p>
+<p>7、项目经理了解到主题专家（SME）正在考虑离开公司。该专家资源在其主题领域拥有深厚的知识，很难被替代。为确保主题专家能在整个项目期间留在项目中，项目经理与主题专家的经理讨论可能的措施。这些措施应该记录在哪个文件中？<br>A. 资源管理计划<br>B. 风险登记册<br>C. 风险管理计划<br>D. 组织分解结构    </p>
+<p>答案:B 。<strong>潜在应对措施记录在风险登记册中</strong>。 </p>
+<p>8、Project team completed the project risk assessment, and identified a contingency solution to reduce the potential impact of one risk.Which of the following is an accurate description of the proposed solution?<br>A. Transfer<br>B. Avoid<br>C. Mitigate<br>D. Acceptance<br><strong>8</strong>.项目团队完成对项目风险的评估，并识别一个权变解决方案，来<strong>减少其中一个风险项的潜在影响</strong>。下列哪一项是这个提议解决方案的准确描述？<br>A. 转移<br>B. 回避<br>C. 缓解<br>D. 接受    </p>
+<p>答案 C。缓解是陌生词汇，遇到陌生词汇看一眼英文，Mitigate 是减轻的意思  </p>
+<p>9、对于具有多个功能点的项目，哪种风险分析法可提供定量风险评估？<br>A. 风险概率和影响评估<br>B. 蒙特卡洛分析<br>C. 头脑风暴法<br>D. 风险登记册  </p>
+<p>答案 B。定量风险分析的工具，建模和模拟。  </p>
+
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+      
+    
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/PMP/" rel="tag"># PMP</a>
+          
+            <a href="/tags/PMP知识点/" rel="tag"># PMP知识点</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2019/09/01/PMP-预分派/" rel="next" title="PMP:预分派">
+                <i class="fa fa-chevron-left"></i> PMP:预分派
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+  </div>
+
+
+          </div>
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image" src="/images/lufei.jpeg" alt="Bigdan">
+            
+              <p class="site-author-name" itemprop="name">Bigdan</p>
+              <div class="site-description motion-element" itemprop="description">理想三旬</div>
+          </div>
+
+          
+            <nav class="site-state motion-element">
+              
+                <div class="site-state-item site-state-posts">
+                
+                  <a href="/archives/">
+                
+                    <span class="site-state-item-count">134</span>
+                    <span class="site-state-item-name">日志</span>
+                  </a>
+                </div>
+              
+
+              
+                
+                
+                <div class="site-state-item site-state-categories">
+                  
+                    
+                      <a href="/categories/">
+                    
+                  
+                    
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">33</span>
+                    <span class="site-state-item-name">分类</span>
+                  </a>
+                </div>
+              
+
+              
+                
+                
+                <div class="site-state-item site-state-tags">
+                  
+                    
+                      <a href="/tags/">
+                    
+                  
+                    
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">52</span>
+                    <span class="site-state-item-name">标签</span>
+                  </a>
+                </div>
+              
+            </nav>
+          
+
+          
+
+          
+
+          
+
+          
+
+          
+          
+
+          
+            
+          
+          
+
+        </div>
+      </div>
+
+      
+      <!--noindex-->
+        <div class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+            
+            
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#11-1-规划风险管理："><span class="nav-number">1.</span> <span class="nav-text">11.1 规划风险管理：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#11-2-识别风险："><span class="nav-number">2.</span> <span class="nav-text">11.2 识别风险：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#11-3-实施定性风险分析："><span class="nav-number">3.</span> <span class="nav-text">11.3 实施定性风险分析：</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#练习题："><span class="nav-number">3.1.</span> <span class="nav-text">练习题：</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#11-4-实施定量风险分析："><span class="nav-number">4.</span> <span class="nav-text">11.4 实施定量风险分析：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#11-5-规划风险应对"><span class="nav-number">5.</span> <span class="nav-text">11.5 规划风险应对</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#练习题：-1"><span class="nav-number">5.1.</span> <span class="nav-text">练习题：</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#11-6-实施风险应对"><span class="nav-number">6.</span> <span class="nav-text">11.6 实施风险应对</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#11-7-监督风险："><span class="nav-number">7.</span> <span class="nav-text">11.7 监督风险：</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#练习题：-2"><span class="nav-number">7.1.</span> <span class="nav-text">练习题：</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </div>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+  
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2019</span>
+  <span class="with-love" id="animate">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Bigdan</span>
+
+  
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-area-chart"></i>
+    </span>
+    
+    <span title="站点总字数">117k</span>
+  
+
+  
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+    
+    <span title="站点阅读时长">1:46</span>
+  
+</div>
+
+
+  <div class="powered-by">由 <a href="https://hexo.io" class="theme-link" rel="noopener" target="_blank">Hexo</a> 强力驱动 v3.8.0</div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">主题 – <a href="https://theme-next.org" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a> v7.1.0</div>
+
+
+
+
+        
+
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+    
+
+    
+  </div>
+
+  
+
+<script>
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+    
+    
+  
+  <script color="0,0,255" opacity="0.5" zindex="-1" count="99" src="/lib/canvas-nest/canvas-nest.min.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  <script src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+
+  
+
+
+  <script src="/js/utils.js?v=7.1.0"></script>
+
+  <script src="/js/motion.js?v=7.1.0"></script>
+
+
+
+  
+  
+
+
+  <script src="/js/affix.js?v=7.1.0"></script>
+
+  <script src="/js/schemes/pisces.js?v=7.1.0"></script>
+
+
+
+
+  
+  <script src="/js/scrollspy.js?v=7.1.0"></script>
+<script src="/js/post-details.js?v=7.1.0"></script>
+
+
+
+  
+
+
+  <script src="/js/next-boot.js?v=7.1.0"></script>
+
+
+  
+
+  
+
+  
+
+  
+
+
+  
+
+
+  
+
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>
